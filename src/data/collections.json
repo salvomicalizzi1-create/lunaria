@@ -1,0 +1,158 @@
+{
+  "collections": [
+    {
+      "id": "fasi",
+      "name": {
+        "it": "Fasi",
+        "en": "Phases"
+      },
+      "tag": "PHASES",
+      "meaning": {
+        "it": "Il tempo, misurato in luce.",
+        "en": "Time, measured in light."
+      },
+      "family": {
+        "it": "T-shirt, tote, calze",
+        "en": "T-shirts, totes, socks"
+      },
+      "accent": "var(--color-aurora)",
+      "image": "/images/collections/fasi.jpg",
+      "alt": {
+        "it": "T-shirt bianco osso distesa su pietra grigia, con le fasi lunari stampate in fila in un solo inchiostro blu.",
+        "en": "Bone-white t-shirt laid on grey stone, the lunar phases printed in a row in a single blue ink."
+      }
+    },
+    {
+      "id": "arcani",
+      "name": {
+        "it": "Arcani",
+        "en": "Arcana"
+      },
+      "tag": "ARCANA",
+      "meaning": {
+        "it": "Ventidue figure, ventidue capi.",
+        "en": "Twenty-two figures, twenty-two garments."
+      },
+      "family": {
+        "it": "T-shirt pesanti, felpe",
+        "en": "Heavyweight tees, sweatshirts"
+      },
+      "accent": "var(--color-peonia)",
+      "image": "/images/collections/arcani.jpg",
+      "alt": {
+        "it": "Felpa piegata su pietra, con un arco inciso stampato sul petto e un segno verticale al centro.",
+        "en": "Folded sweatshirt on stone, an engraved arch printed on the chest with a vertical mark inside it."
+      }
+    },
+    {
+      "id": "erbario",
+      "name": {
+        "it": "Erbario",
+        "en": "Herbarium"
+      },
+      "tag": "HERBARIUM",
+      "meaning": {
+        "it": "Le piante che si usavano prima delle farmacie.",
+        "en": "The plants people used before pharmacies."
+      },
+      "family": {
+        "it": "Camicie, sopracamicie, sciarpe",
+        "en": "Shirts, overshirts, scarves"
+      },
+      "accent": "var(--color-verderame)",
+      "image": "/images/collections/erbario.jpg",
+      "alt": {
+        "it": "Sopracamicia di cotone chiaro con uno stelo di artemisia inciso, stampato in blu notte su tutta la lunghezza.",
+        "en": "Pale cotton overshirt with an engraved artemisia stem printed in night blue down its length."
+      }
+    },
+    {
+      "id": "carta-del-cielo",
+      "name": {
+        "it": "Carta del cielo",
+        "en": "Sky chart"
+      },
+      "tag": "SKY CHART",
+      "meaning": {
+        "it": "Il cielo esatto di un momento esatto.",
+        "en": "The exact sky of an exact moment."
+      },
+      "family": {
+        "it": "T-shirt, tote, felpe con cappuccio",
+        "en": "Tees, totes, hoodies"
+      },
+      "accent": "var(--color-zolfo)",
+      "image": "/images/collections/carta-del-cielo.jpg",
+      "alt": {
+        "it": "Tote di cotone naturale con una ruota di case celesti incisa a linee sottili e piccole stelle attorno.",
+        "en": "Natural cotton tote printed with an engraved wheel of celestial houses and small stars around it."
+      }
+    },
+    {
+      "id": "sale-e-ferro",
+      "name": {
+        "it": "Sale e ferro",
+        "en": "Salt and iron"
+      },
+      "tag": "SALT AND IRON",
+      "meaning": {
+        "it": "Ciò che tiene lontano.",
+        "en": "What keeps things away."
+      },
+      "family": {
+        "it": "Denim, giacche, cappelli",
+        "en": "Denim, jackets, caps"
+      },
+      "accent": "var(--color-silver)",
+      "image": "/images/collections/sale-e-ferro.jpg",
+      "alt": {
+        "it": "Giacca di denim indaco vista di schiena, con una chiave antica incisa stampata in bianco osso.",
+        "en": "Indigo denim jacket seen from the back, an engraved old key printed in bone white."
+      }
+    }
+  ],
+  "categories": [
+    {
+      "id": "t-shirt",
+      "name": {
+        "it": "T-shirt",
+        "en": "T-shirts"
+      }
+    },
+    {
+      "id": "felpe",
+      "name": {
+        "it": "Felpe",
+        "en": "Sweatshirts"
+      }
+    },
+    {
+      "id": "maglieria",
+      "name": {
+        "it": "Maglieria",
+        "en": "Knitwear"
+      }
+    },
+    {
+      "id": "camicie",
+      "name": {
+        "it": "Camicie",
+        "en": "Shirts"
+      }
+    },
+    {
+      "id": "denim",
+      "name": {
+        "it": "Denim",
+        "en": "Denim"
+      }
+    },
+    {
+      "id": "accessori",
+      "name": {
+        "it": "Accessori",
+        "en": "Accessories"
+      }
+    }
+  ]
+}

@@ -1,0 +1,251 @@
+/* Component styles. Every value comes from a token: no magic numbers here. */
+
+@layer components {
+  /* ------------------------------------------------------------- button */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-2);
+    padding: 14px var(--spacing-5);
+    border: 1px solid currentColor;
+    border-radius: var(--radius-none);
+    font-size: var(--text-small);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+    transition:
+      background-color var(--dur-base) var(--ease-out-quart),
+      color var(--dur-base) var(--ease-out-quart),
+      border-color var(--dur-base) var(--ease-out-quart),
+      transform var(--dur-micro) var(--ease-spring);
+  }
+
+  .btn--primary { color: var(--gold); }
+  .btn--primary:hover:not(:disabled) { background: var(--gold); color: var(--canvas); }
+
+  .btn--ghost { color: var(--fg); border-color: var(--rule-strong); }
+  .btn--ghost:hover:not(:disabled) { border-color: var(--fg); }
+
+  .btn:disabled,
+  .btn[aria-disabled='true'] {
+    color: var(--fg-2);
+    border-color: var(--rule);
+    cursor: not-allowed;
+  }
+
+  .btn:active:not(:disabled) { transform: translateY(1px); }
+
+  /* 44px is the practical minimum for a thumb; the standard's 24px is the floor,
+     not the target. Re-declaring the alignment matters: swapping display without
+     it left-aligns the label and shrinks full-width rows to their text. */
+  @media (pointer: coarse) {
+    .btn {
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  /**
+   * Su uno schermo stretto un'etichetta lunga va a capo.
+   *
+   * `white-space: nowrap` su un pulsante è giusto quasi sempre: un'etichetta
+   * spezzata in due si legge peggio. Ma un pulsante che non può andare a capo
+   * ha una larghezza minima invalicabile, e dentro una griglia quella larghezza
+   * non resta un suo problema: sfonda la colonna e ci trascina dentro tutti i
+   * fratelli.
+   *
+   * È successo davvero, e il sintomo era lontano dalla causa. Su 360px «La
+   * collezione della prossima uscita» chiede 363px. La colonna della sezione
+   * della luna, larga 320, diventava 362,58 — e la tabella delle fasi, che con
+   * quel pulsante non c'entra niente, finiva a 383px, ventitré oltre il bordo
+   * dello schermo, tagliata. Si vedeva sparire la fine dei valori e non si
+   * capiva perché.
+   */
+  @media (max-width: 767px) {
+    .btn { white-space: normal; text-align: center; }
+  }
+
+  /* -------------------------------------------------------------- price */
+  .price {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+    color: var(--gold);
+  }
+  .price__was {
+    color: var(--fg-2);
+    text-decoration: line-through;
+    margin-inline-start: var(--spacing-2);
+  }
+  /* EU price indication: when something is discounted the lowest price of the
+     previous 30 days must be shown. It is a fact, so it is never hidden. */
+  .price__lowest {
+    display: block;
+    font-family: var(--font-body);
+    font-size: var(--text-eyebrow);
+    letter-spacing: 0.04em;
+    color: var(--fg-2);
+    margin-top: var(--spacing-1);
+  }
+
+  /* --------------------------------------------------------- skip link */
+  .skip {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    z-index: 100;
+    background: var(--panel);
+    color: var(--fg);
+    padding: var(--spacing-3) var(--spacing-4);
+    border: 1px solid var(--rule-strong);
+  }
+  .skip:focus { left: var(--spacing-3); top: var(--spacing-3); }
+
+  /* ------------------------------------------------------------ header */
+  .hdr {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: color-mix(in srgb, var(--canvas) 92%, transparent);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--rule);
+  }
+  .hdr__in {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-4);
+    height: 56px;
+  }
+  @media (min-width: 1024px) { .hdr__in { height: 72px; } }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    margin-inline-end: auto;
+    text-decoration: none;
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+
+  .navmain { display: none; }
+  @media (min-width: 1024px) {
+    .navmain { display: flex; gap: var(--spacing-6); margin-inline-end: var(--spacing-6); }
+    .navmain a {
+      position: relative;
+      padding-block: 6px;
+      font-size: var(--text-small);
+      letter-spacing: 0.06em;
+      text-decoration: none;
+      color: var(--fg-2);
+    }
+    .navmain a:hover { color: var(--fg); }
+    .navmain a::after {
+      content: '';
+      position: absolute;
+      inset-inline: 0;
+      bottom: 0;
+      height: 1px;
+      background: var(--accent);
+      transform: scaleX(0);
+      transition: transform var(--dur-base) var(--ease-out-quart);
+    }
+    .navmain a:hover::after { transform: scaleX(1); }
+  }
+
+  .tool {
+    padding: 8px 10px;
+    border: 1px solid var(--rule-strong);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--fg-2);
+    transition:
+      border-color var(--dur-micro) var(--ease-out-quart),
+      color var(--dur-micro) var(--ease-out-quart);
+  }
+  .tool:hover { border-color: var(--fg); color: var(--fg); }
+  @media (pointer: coarse) {
+    .tool { min-height: 44px; min-width: 44px; display: inline-flex; align-items: center; justify-content: center; }
+  }
+
+  /* Sul telefono la lingua vive dentro al menu, non in cima: quattro riquadri
+     accanto al marchio riempivano la riga fino al bordo. Dai 768px torna su.
+     Sta DOPO il blocco `pointer: coarse` di proposito: quello rimette
+     `display: inline-flex` su `.tool` con la stessa specificità, e vince
+     l'ultimo che parla. Scritta prima, questa regola non faceva niente. */
+  .tool--lingua { display: none; }
+  @media (min-width: 768px) { .tool--lingua { display: inline-flex; } }
+
+  /* ------------------------------------------------------------ footer */
+  .ftr { border-top: 1px solid var(--rule); padding-block: var(--spacing-8) var(--spacing-7); }
+  .ftr__cols { display: grid; gap: var(--spacing-7); }
+  @media (min-width: 768px)  { .ftr__cols { grid-template-columns: repeat(2, 1fr); } }
+  /* Sul telefono le quattro colonne diventavano una sola pila alta 814px.
+     Gli elenchi di collegamenti sono corti: due per riga si leggono uguale e
+     costano meta. Il blocco del marchio resta a tutta larghezza, perche e
+     prosa e non un elenco. */
+  @media (max-width: 767px) {
+    .ftr__cols { grid-template-columns: repeat(2, 1fr); gap: var(--spacing-6); }
+    /* il marchio è prosa, non un elenco: tiene tutta la riga */
+    .ftr__cols > :first-child { grid-column: 1 / -1; }
+    /* e l'ultimo è il più lungo — sette voci: a due colonne sue, invece di
+       restare una torre a sinistra con il vuoto accanto */
+    .ftr__cols > :last-child { grid-column: 1 / -1; }
+    .ftr__cols > :last-child ul { display: grid; grid-template-columns: 1fr 1fr; gap: 2px var(--spacing-4); }
+  }
+  @media (min-width: 1024px) { .ftr__cols { grid-template-columns: 1.4fr 1fr 1fr 1.2fr; gap: var(--spacing-6); } }
+  .ftr h2 {
+    font-family: var(--font-body);
+    font-size: var(--text-eyebrow);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-eyebrow);
+    color: var(--fg-2);
+    margin-bottom: var(--spacing-4);
+  }
+  .ftr ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 2px; }
+  .ftr a {
+    display: inline-block;
+    padding-block: 5px;
+    font-size: var(--text-small);
+    text-decoration: none;
+    color: var(--fg-2);
+  }
+  .ftr a:hover { color: var(--fg); }
+  .ftr__legal {
+    margin-top: var(--spacing-8);
+    border-top: 1px solid var(--rule);
+    padding-top: var(--spacing-5);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4);
+    font-size: var(--text-small);
+    color: var(--fg-2);
+    max-width: 80ch;
+  }
+  .tag {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    padding: 1px 6px;
+    white-space: nowrap;
+  }
+
+  /* --------------------------------------------------- system showcase */
+  .swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: var(--spacing-3); }
+  .swatch { border: 1px solid var(--rule); padding: var(--spacing-3); display: flex; flex-direction: column; gap: var(--spacing-2); }
+  .swatch__chip { height: 56px; border: 1px solid var(--rule); }
+  .swatch__name { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; }
+  .swatch__hex { font-family: var(--font-mono); font-size: 11px; color: var(--fg-2); }
+  .ramp { display: flex; align-items: flex-end; gap: var(--spacing-2); flex-wrap: wrap; }
+  .ramp span { background: var(--accent); opacity: 0.55; display: block; width: 14px; }
+}

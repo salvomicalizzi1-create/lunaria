@@ -1,0 +1,603 @@
+{
+  "brand": {
+    "name": "LUNARIA",
+    "payoff": "Un anno che si può indossare."
+  },
+  "nav": {
+    "skip": "Vai al contenuto",
+    "collections": "Collezioni",
+    "categories": "Categorie",
+    "thirteenMoons": "Tredici lune",
+    "circle": "Il Cerchio",
+    "search": "Cerca",
+    "account": "Account",
+    "cart": "Carrello",
+    "menu": "Menu",
+    "close": "Chiudi",
+    "main": "Navigazione principale",
+    "tonightsMoon": "La luna di adesso",
+    "material": "Materia",
+    "oracle": "L'Oracolo",
+    "shop": "Il negozio",
+    "yours": "Il tuo",
+    "orders": "I tuoi ordini",
+    "help": "Aiuto e contatti",
+    "brandCol": "Il marchio",
+    "language": "Lingua"
+  },
+  "lang": {
+    "toEn": "EN",
+    "toIt": "IT",
+    "switchToEn": "Switch to English",
+    "switchToIt": "Passa all'italiano"
+  },
+  "home": {
+    "title": "LUNARIA · Un anno che si può indossare",
+    "description": "L'anno ha tredici lune, non dodici mesi. Ogni luna lascia un capo, poi passa. Tredici uscite l'anno, ognuna sulla luna nuova."
+  },
+  "price": {
+    "lowest30": "Prezzo più basso negli ultimi 30 giorni",
+    "vatIncluded": "IVA inclusa"
+  },
+  "footer": {
+    "fictional": "LUNARIA è un marchio di fantasia. Non esiste una società con questo nome, i capi non sono in vendita, e le immagini sono generate con l'intelligenza artificiale.",
+    "esoteric": "I contenuti simbolici, astrologici e legati ai tarocchi hanno valore estetico, culturale e di intrattenimento. Non si dichiara né si implica alcuna efficacia terapeutica, medica, predittiva o soprannaturale.",
+    "legalTodo": "Un negozio vero deve pubblicare qui ragione sociale, sede legale, partita IVA, numero REA, PEC, informativa privacy, condizioni di vendita e diritto di recesso. Questi testi vanno scritti e verificati da un avvocato prima di vendere.",
+    "legalTag": "DA VERIFICARE CON UN LEGALE",
+    "help": "Aiuto e contatti",
+    "legal": "Note legali",
+    "collections": "Collezioni",
+    "brandCol": "Il marchio",
+    "withdrawal": "Diritto di recesso",
+    "terms": "Condizioni di vendita",
+    "privacy": "Informativa privacy",
+    "cookies": "Cookie"
+  },
+  "collectionsIndex": {
+    "title": "Le cinque collezioni · LUNARIA",
+    "description": "Cinque alfabeti: fasi, arcani, erbario, carta del cielo, sale e ferro. Ogni segno ha una fonte scritta.",
+    "eyebrow": "Cinque alfabeti",
+    "heading": "Ogni simbolo ha un significato scritto.",
+    "lede": "Niente sta addosso a un capo senza una riga che dica da dove viene. Se non sappiamo dirlo, non lo stampiamo.",
+    "see": "Guarda {name}"
+  },
+  "plp": {
+    "size": "Taglia",
+    "colour": "Colore",
+    "availability": "Disponibilità",
+    "onlyAvailable": "Solo disponibili",
+    "sort": "Ordina",
+    "sort_novita": "Novità",
+    "sort_prezzo-su": "Prezzo crescente",
+    "sort_prezzo-giu": "Prezzo decrescente",
+    "sort_venduti": "Più venduti",
+    "count": "{n, plural, =0 {Nessun capo} one {Un capo} other {# capi}}",
+    "shown": "Ne vedi {shown} su {total}",
+    "loadMore": "Carica altri",
+    "prev": "Precedenti",
+    "pagination": "Paginazione",
+    "clearFilters": "Togli tutti i filtri",
+    "soldOut": "Esaurito",
+    "lowStock": "Ultimi pezzi",
+    "emptyTitle": "Qui non c'è niente.",
+    "emptyBody": "Con questi filtri non resta nessun capo. Togline uno, oppure comincia da una di queste collezioni.",
+    "categoryDescription": "Tutti i capi LUNARIA nella categoria {name}, con taglie, materiali e il significato di ogni segno."
+  },
+  "pdp": {
+    "breadcrumb": "Dove sei",
+    "collections": "Collezioni",
+    "colour": "Colore",
+    "size": "Taglia",
+    "chooseSize": "Scegli la taglia",
+    "addToCart": "Aggiungi al carrello",
+    "added": "{name}, taglia {size}: aggiunto al carrello.",
+    "left": "ne restano {n}",
+    "soldOut": "Esaurito",
+    "lowStock": "Ultimi pezzi",
+    "notifyIntro": "La taglia {size} è finita.",
+    "notifyMe": "Avvisami",
+    "notifyDone": "Fatto. Ti scriviamo quando torna.",
+    "yourEmail": "La tua mail",
+    "demoNote": "Questo sito è una dimostrazione: l'indirizzo non viene inviato né salvato da nessuna parte.",
+    "lowest30": "Prezzo più basso negli ultimi 30 giorni",
+    "vatIncluded": "IVA inclusa",
+    "delivery": "Consegna stimata in Italia: 2-4 giorni lavorativi · Spedizione gratuita sopra i €120 · 30 giorni per cambiare idea",
+    "meaning": "Il significato",
+    "materials": "Materia e cura",
+    "composition": "Composizione",
+    "weight": "Grammatura",
+    "origin": "Origine",
+    "care": "Lavaggio",
+    "textileNote": "Composizione ed etichettatura secondo il regolamento europeo 1007/2011 sui prodotti tessili.",
+    "fit": "Vestibilità",
+    "fitRating": "Come veste, secondo chi l'ha comprato",
+    "fit_small": "Veste stretto",
+    "fit_true": "Veste giusto",
+    "fit_large": "Veste largo",
+    "fitSample": "Dati di esempio su {n} risposte. Diventeranno reali quando ci saranno acquisti reali.",
+    "completeTheRite": "Completa il rito",
+    "sameCollection": "Della stessa collezione: {name}",
+    "allIn": "Tutti i capi in {name}"
+  },
+  "cart": {
+    "cart": "Carrello",
+    "title": "Il carrello",
+    "open": "Apri il carrello, {n, plural, =0 {vuoto} one {un capo} other {# capi}}",
+    "close": "Chiudi",
+    "summary": "Riepilogo dell'ordine",
+    "emptyTitle": "Il carrello è ancora buio.",
+    "emptyBody": "Non c'è niente dentro. Le cinque collezioni sono un buon punto da cui cominciare.",
+    "emptyCta": "Guarda le collezioni",
+    "shipGap": "Mancano {amount} alla spedizione gratuita",
+    "shipFree": "Spedizione gratuita inclusa",
+    "less": "Uno in meno",
+    "more": "Uno in più",
+    "maxReason": "Ne abbiamo {n} in magazzino, non di più",
+    "remove": "Rimuovi",
+    "removed": "{name} rimosso",
+    "undo": "Annulla",
+    "subtotal": "Totale",
+    "vatInside": "Di cui IVA: {amount}",
+    "shippingAtCheckout": "Spedizione calcolata alla cassa, prima di pagare",
+    "items": "{n, plural, =0 {Nessun capo} one {Un capo} other {# capi}}",
+    "checkout": "Vai alla cassa",
+    "viewCart": "Apri il carrello a pagina intera"
+  },
+  "checkout": {
+    "title": "Cassa",
+    "stepsLabel": "Passi della cassa",
+    "step_contatto": "Contatto",
+    "step_spedizione": "Spedizione",
+    "step_pagamento": "Pagamento",
+    "guestNote": "Non serve registrarsi. Se vuoi un account, te lo proponiamo dopo l'acquisto.",
+    "email": "Email",
+    "emailHint": "Ci serve per mandarti la conferma e il numero di spedizione.",
+    "firstName": "Nome",
+    "lastName": "Cognome",
+    "address": "Indirizzo",
+    "address2": "Scala, interno, citofono",
+    "postcode": "CAP",
+    "city": "Città",
+    "province": "Provincia",
+    "country": "Paese",
+    "phone": "Telefono",
+    "phoneHint": "Solo per il corriere, se deve chiamarti.",
+    "billingSame": "L'indirizzo di fatturazione è lo stesso",
+    "back": "Indietro",
+    "toShipping": "Continua con la spedizione",
+    "toPayment": "Continua con il pagamento",
+    "edit": "modifica",
+    "shippingTo": "Spedizione a {name}, {address}.",
+    "summary": "Riepilogo dell'ordine",
+    "subtotal": "Capi",
+    "shipping": "Spedizione",
+    "free": "Gratuita",
+    "total": "Totale",
+    "ofWhichVat": "Di cui IVA",
+    "trustSecure": "Pagamento cifrato: i dati della carta vanno diretti a Stripe, questo sito non li vede mai.",
+    "trustWithdrawal": "Quattordici giorni di ripensamento per legge, trenta per nostra scelta.",
+    "trustContact": "Un indirizzo email vero a cui scrivere, non un modulo che sparisce.",
+    "demoNote": "Questo negozio è una dimostrazione. Stripe è in modalità test: nessun soldo si muove e nessuna carta vera viene addebitata.",
+    "errSummary": "{n, plural, one {C'è un campo da sistemare} other {Ci sono # campi da sistemare}}",
+    "errEmailRequired": "Serve un indirizzo email.",
+    "errEmailFormat": "Questa email non sembra completa. Controlla la chiocciola.",
+    "errFirstName": "Serve il nome.",
+    "errLastName": "Serve il cognome.",
+    "errLine1": "Serve l'indirizzo.",
+    "errPostcode": "Serve il CAP.",
+    "errPostcodeIt": "Il CAP italiano ha cinque cifre.",
+    "errCity": "Serve la città.",
+    "errCountry": "Serve il paese.",
+    "emptyTitle": "Il carrello è vuoto.",
+    "emptyBody": "Non c'è niente da pagare. Le cinque collezioni sono un buon punto da cui cominciare.",
+    "emptyCta": "Guarda le collezioni",
+    "preparing": "Preparo il pagamento…",
+    "paying": "Un momento…",
+    "payNow": "Paga {amount}",
+    "payFailed": "Il pagamento non è andato a buon fine.",
+    "testCard": "Carta di prova: 4242 4242 4242 4242 · una data futura qualsiasi · un CVC qualsiasi",
+    "noKey": "Manca la chiave Stripe: aggiungi NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY in .env.local.",
+    "setupFailed": "Non riesco a preparare il pagamento ({reason}).",
+    "country_IT": "Italia",
+    "country_FR": "Francia",
+    "country_DE": "Germania",
+    "country_ES": "Spagna",
+    "country_NL": "Paesi Bassi",
+    "country_BE": "Belgio",
+    "country_AT": "Austria",
+    "country_PT": "Portogallo",
+    "country_IE": "Irlanda",
+    "country_GB": "Regno Unito",
+    "country_CH": "Svizzera",
+    "country_US": "Stati Uniti"
+  },
+  "thanks": {
+    "eyebrow": "Ordine ricevuto",
+    "title": "Grazie.",
+    "body": "L'ordine è registrato. Ti arriva una mail con il riepilogo.",
+    "bodyWithEmail": "L'ordine è registrato. Il riepilogo arriva a {email}.",
+    "next": "Cosa succede adesso",
+    "withdrawal": "Ripensamenti",
+    "demoNote": "Questo era un pagamento di prova. Nessun soldo si è mosso, nessun pacco verrà spedito, e il marchio LUNARIA non esiste.",
+    "keepLooking": "Torna alle collezioni",
+    "toAccount": "Vai al tuo account",
+    "noRecordBody": "Non troviamo questo ordine. Se hai appena pagato, l'indirizzo di questa pagina potrebbe aver perso il riferimento: cercalo con il numero d'ordine che ti abbiamo mandato per mail.",
+    "findOrder": "Cerca il tuo ordine"
+  },
+  "gpsr": {
+    "title": "Sicurezza e conformità del prodotto",
+    "lead": "Il regolamento europeo 2023/988, in vigore dal 13 dicembre 2024, impone che su ogni scheda prodotto siano indicati il fabbricante, il suo indirizzo, un contatto, il responsabile per l'Unione europea e un identificativo del prodotto.",
+    "sku": "Identificativo",
+    "manufacturer": "Fabbricante",
+    "address": "Indirizzo postale",
+    "email": "Contatto",
+    "responsible": "Responsabile per l'UE",
+    "warnings": "Avvertenze",
+    "noWarnings": "Nessuna avvertenza particolare per un capo di abbigliamento in cotone.",
+    "tag": "DA VERIFICARE CON UN LEGALE"
+  },
+  "hero": {
+    "h1": "LUNARIA. Un anno che si può indossare.",
+    "band1H": "L'anno ha tredici lune, non dodici mesi.",
+    "band1P": "Il calendario che usi è una convenzione. Questo no.",
+    "band2H": "Ogni luna lascia un capo.",
+    "band2P": "Quando la luna passa il capo resta, e finisce lì.",
+    "band3H": "Cinque alfabeti.",
+    "band3P": "Fasi. Arcani. Erbario. Carta del cielo. Sale e ferro.",
+    "band4H": "Un anno che si può indossare.",
+    "band4Fallback": "Tredici uscite l'anno, una per ogni luna nuova.",
+    "nextLine": "La prossima luna nuova è {day}{month}. Esce {moon}.",
+    "ctaMoon": "Guarda la luna di adesso",
+    "ctaCollections": "Le cinque collezioni",
+    "scroll": "Scorri",
+    "moonWord": "LUNA",
+    "staticBody": "L'anno ha tredici lune, non dodici mesi. Ogni luna lascia un capo, e quando la luna passa quel capo finisce lì."
+  },
+  "ticker": {
+    "payoff": "Un anno che si può indossare",
+    "illuminated": "Luce illuminata {pct}%",
+    "nextIn": "Prossima luna nuova fra {days} giorni",
+    "liveRelease": "Uscita in corso · {moon}",
+    "shipping": "Spedizione gratuita sopra i €120",
+    "returns": "30 giorni per cambiare idea"
+  },
+  "instrument": {
+    "eyebrow": "In questo momento",
+    "heading": "La linea è qui.",
+    "lede": "Il terminatore è il nome della riga che divide la luce dall'ombra sulla luna. Si muove ogni notte. Quando arriva a zero, esce qualcosa.",
+    "dialTitle": "La luna in questo momento",
+    "phase": "Fase",
+    "illuminated": "Luce illuminata",
+    "age": "Età del ciclo",
+    "cycleLength": "Durata di questa luna",
+    "nextNewMoon": "Prossima luna nuova",
+    "nextRelease": "Prossima uscita",
+    "remaining": "Mancano",
+    "days": "giorni",
+    "dayShort": " g",
+    "yearClosed": "Anno chiuso",
+    "seeCollection": "La collezione della prossima uscita"
+  },
+  "collectionsHome": {
+    "eyebrow": "Cinque alfabeti",
+    "heading": "Ogni simbolo ha un significato scritto.",
+    "lede": "Niente sta addosso a un capo senza una riga che dica da dove viene. Se non sappiamo dirlo, non lo stampiamo.",
+    "count": "{n, plural, one {# capo} other {# capi}}",
+    "see": "Vedi {name}"
+  },
+  "meaning": {
+    "imageAlt": "Maglietta bianca in cotone pesante distesa su pietra, con l'incisione della carta della Stella stampata in un solo inchiostro blu notte.",
+    "edition": "EDIZIONE {n}",
+    "print": "Stampa serigrafica a un colore · 4 passaggi · inchiostro ad acqua",
+    "cta": "Vedi la scheda e le taglie"
+  },
+  "material": {
+    "eyebrow": "La materia",
+    "heading": "240 grammi. Non è un dettaglio.",
+    "lede": "Le magliette leggere si accartocciano al terzo lavaggio e la stampa si crepa. Le nostre pesano 240 grammi al metro quadro, il cotone è pettinato e ring-spun, e il collo ha una costina doppia che tiene la forma. La stampa è serigrafia ad acqua, che entra nella fibra invece di stare sopra.",
+    "caption": "Scheda tecnica del capo",
+    "legal": "Le certificazioni non le dichiariamo finché non le abbiamo in mano. Composizione ed etichettatura seguono il regolamento europeo sui prodotti tessili.",
+    "imageAlt": "Macro del cotone jersey bianco osso, con le maglie del tessuto e la costina doppia illuminate da una luce fredda radente.",
+    "kComposition": "Composizione",
+    "vComposition": "100% cotone organico",
+    "kWeight": "Grammatura",
+    "vWeight": "240 g/m²",
+    "kYarn": "Filato",
+    "vYarn": "Pettinato, ring-spun",
+    "kYarnOrigin": "Origine filato",
+    "vYarnOrigin": "Portogallo",
+    "kMadeIn": "Confezione",
+    "vMadeIn": "Portogallo",
+    "kShrinkage": "Restringimento atteso",
+    "vShrinkage": "Meno del 3% a 30°C",
+    "kFit": "Vestibilità",
+    "vFit": "Dritta, spalla scesa",
+    "kCare": "Lavaggio",
+    "vCare": "A rovescio, 30°C, niente asciugatrice"
+  },
+  "oracle": {
+    "eyebrow": "L'Oracolo",
+    "heading": "Tieni premuto finché la linea non passa.",
+    "lede": "Tre carte: intenzione, materia, stagione. Ventisette letture possibili, e tre capi veri alla fine di ognuna.",
+    "hold": "Tieni premuto",
+    "shuffle": "Rimescola il mazzo",
+    "shuffled": "Mazzo rimescolato. Tre carte nuove, coperte.",
+    "count": "{n} letture possibili",
+    "yourReading": "La tua lettura",
+    "see": "Vedi il capo",
+    "disclaimer": "L'Oracolo è un gioco. Serve a scegliere una maglietta, non a prevedere niente. I contenuti simbolici di questo sito hanno valore estetico e culturale: non dichiariamo alcuna efficacia terapeutica, medica, predittiva o soprannaturale."
+  },
+  "moons": {
+    "eyebrow": "Le tredici lune",
+    "heading": "Tredici cicli lunari stanno in un anno solare.",
+    "lede": "Ogni uscita cade sulla luna nuova, quando il terminatore è a zero. Quello che è uscito, è uscito: non lo ristampiamo per fare pressione.",
+    "past": "Archivio",
+    "live": "In corso",
+    "next": "In arrivo",
+    "garments": "{n, plural, =0 {nessun capo} one {# capo} other {# capi}}",
+    "prev": "Mostra le lune precedenti",
+    "next2": "Mostra le lune successive"
+  },
+  "circle": {
+    "eyebrow": "Il Cerchio",
+    "heading": "Entra nel Cerchio.",
+    "promise": "Le tredici lune, in anticipo. Niente altro.",
+    "terms": "Una mail per luna nuova. Tredici all'anno. Ti puoi togliere con un clic, e il link è in fondo a ogni mail.",
+    "email": "La tua mail",
+    "consent": "Ho letto come trattate i miei dati e voglio ricevere le tredici lune.",
+    "submit": "Entra",
+    "note": "Questo sito è una dimostrazione: il tuo indirizzo non viene inviato né salvato da nessuna parte. Resta nella finestra del tuo browser e sparisce quando la chiudi.",
+    "errEmail": "Questa mail non sembra completa. Controlla la chiocciola.",
+    "errConsent": "Serve la spunta qui sotto per poterti scrivere.",
+    "done": "Ci sei. La prossima è {moon}, il {day} {month}."
+  },
+  "orders": {
+    "eyebrow": "I tuoi ordini",
+    "title": "Trova un ordine",
+    "lede": "Servono il numero d'ordine e la mail con cui l'hai fatto. Non serve nessun account: sono le due cose che ti abbiamo mandato appena hai pagato.",
+    "numberLabel": "Numero d'ordine",
+    "numberHint": "Sei caratteri dopo LN-, come li trovi nella mail.",
+    "numberInvalid": "Un numero d'ordine è fatto così: LN- e sei caratteri.",
+    "emailLabel": "La mail dell'ordine",
+    "emailHint": "Quella a cui è arrivata la ricevuta.",
+    "emailInvalid": "Questa mail non sembra completa. Controlla la chiocciola.",
+    "search": "Cerca l'ordine",
+    "searching": "Un momento…",
+    "notFound": "Nessun ordine con questo numero e questa mail. Controlla che siano entrambi come nella ricevuta. Se hai pagato in questo minuto, aspetta un attimo e riprova: la ricerca ci mette poco ad aggiornarsi.",
+    "unavailable": "In questo momento non riusciamo a leggere gli ordini. Non è colpa di quello che hai scritto: riprova fra poco.",
+    "tooMany": "Troppi tentativi di fila. Aspetta un minuto e riprova.",
+    "knownHere": "Ordini fatti da questo browser",
+    "knownNote": "Questi numeri stanno solo qui, in questo browser. Su un altro dispositivo non ci sono.",
+    "needHelp": "Non trovo il mio ordine",
+    "number": "Numero",
+    "placedOn": "Fatto il",
+    "status": "Stato",
+    "status_paid": "Pagato",
+    "status_processing": "In lavorazione",
+    "status_unpaid": "Non pagato",
+    "status_failed": "Annullato",
+    "subtotal": "Capi",
+    "shipping": "Spedizione",
+    "free": "Gratuita",
+    "total": "Totale",
+    "ofWhichVat": "Di cui IVA",
+    "shippingTo": "Spedito a",
+    "whatNext": "Cosa succede adesso",
+    "whatNextBody": "Prepariamo il pacco entro due giorni lavorativi e ti scriviamo con il numero di tracciamento.",
+    "returnOpen": "Puoi cambiare idea fino al {date}.",
+    "returnClosed": "Il periodo per cambiare idea su questo ordine è chiuso.",
+    "demoNote": "Questo negozio è una dimostrazione. Stripe è in modalità di prova: non si è mosso denaro e non partirà nessun pacco."
+  },
+  "returns": {
+    "title": "Vuoi rimandarlo indietro",
+    "lede": "Scegli cosa vuoi rendere e perché. Prepariamo noi il messaggio: si apre il tuo programma di posta con tutto già scritto, tu lo leggi e lo mandi.",
+    "whichItems": "Quali capi",
+    "why": "Perché",
+    "reason_size": "La taglia non va",
+    "reason_expectation": "Non è come me lo aspettavo",
+    "reason_quality": "C'è un difetto",
+    "reason_wrong": "Mi è arrivato il capo sbagliato",
+    "reason_changed": "Ho cambiato idea",
+    "anythingElse": "Vuoi aggiungere qualcosa",
+    "send": "Prepara il messaggio",
+    "pickSomething": "Segna almeno un capo da rendere.",
+    "note": "Il riferimento del reso è {reference}. Non c'è niente da stampare: ti rispondiamo con le istruzioni entro un giorno lavorativo.",
+    "mailSubject": "Reso",
+    "mailIntro": "Buongiorno, vorrei rendere una parte di questo ordine.",
+    "mailOrder": "Ordine",
+    "mailReference": "Riferimento reso",
+    "mailEmail": "Mail dell'ordine",
+    "mailItems": "Capi da rendere",
+    "mailReason": "Motivo",
+    "mailNote": "Note",
+    "mailClose": "Grazie."
+  },
+  "account": {
+    "eyebrow": "Il tuo account",
+    "title": "Il tuo account",
+    "lede": "Qui il browser si ricorda i tuoi dati, così alla cassa non li riscrivi, e tiene i numeri degli ordini fatti da questo dispositivo.",
+    "truth": "Va detto scuro: non c'è nessuna password e nessun nostro server dietro questa pagina. Tutto quello che vedi qui sta salvato dentro questo browser. Su un altro dispositivo, o dopo aver cancellato i dati del sito, non lo ritrovi. Gli ordini invece esistono davvero: per aprirli servono il numero e la mail, da qualsiasi dispositivo.",
+    "yourDetails": "I tuoi dati",
+    "yourDetailsBody": "Quello che scrivi qui è quello con cui parte la prossima cassa.",
+    "email": "Mail",
+    "firstName": "Nome",
+    "lastName": "Cognome",
+    "address": "Indirizzo",
+    "postcode": "CAP",
+    "city": "Città",
+    "country": "Paese",
+    "save": "Ricorda su questo dispositivo",
+    "savedHere": "Salvato in questo browser.",
+    "yourOrders": "I tuoi ordini",
+    "ordersBody": "I numeri degli ordini fatti da qui. Per aprirne uno servono anche la mail: è la stessa cosa che chiediamo a chiunque.",
+    "noOrders": "Da questo browser non è ancora partito nessun ordine.",
+    "toCollections": "Vedi le collezioni",
+    "open": "Apri",
+    "forget": "Dimentica",
+    "yourData": "I tuoi dati, via",
+    "yourDataBody": "Cancella dal browser il nome, l'indirizzo e i numeri degli ordini. Gli ordini restano validi: quello che sparisce è la scorciatoia per trovarli.",
+    "forgetAll": "Cancella tutto da questo browser",
+    "country_IT": "Italia",
+    "country_FR": "Francia",
+    "country_DE": "Germania",
+    "country_ES": "Spagna",
+    "country_NL": "Paesi Bassi",
+    "country_BE": "Belgio",
+    "country_AT": "Austria",
+    "country_PT": "Portogallo",
+    "country_IE": "Irlanda",
+    "country_GB": "Regno Unito",
+    "country_CH": "Svizzera",
+    "country_US": "Stati Uniti"
+  },
+  "help": {
+    "eyebrow": "Aiuto",
+    "title": "Aiuto e contatti",
+    "lede": "Le domande che arrivano più spesso, con la risposta vera e non con una frase che gira intorno.",
+    "findOrder": "Cerca il tuo ordine",
+    "sections": [
+      {
+        "h": "Come faccio a vedere il mio ordine",
+        "p": "Con il numero d'ordine e la mail con cui l'hai fatto, nella pagina «Trova un ordine». Non serve un account, e non ce n'è uno da creare: sono le due cose che ti sono arrivate per mail appena hai pagato."
+      },
+      {
+        "h": "Quanto ci mette ad arrivare",
+        "p": "Prepariamo il pacco entro due giorni lavorativi. In Italia poi ci vogliono due o tre giorni, nel resto d'Europa dai tre ai sei. Ti scriviamo con il numero di tracciamento quando parte."
+      },
+      {
+        "h": "Quanto costa la spedizione",
+        "p": "In Italia 5,90 €, nel resto dell'Unione europea 9,90 €, fuori 19,90 €. Sopra i 120 € è gratuita ovunque. Il costo si vede nel riepilogo dal primo passo della cassa, non alla fine."
+      },
+      {
+        "h": "Posso cambiare idea",
+        "p": "Sì, entro trenta giorni dalla consegna. La legge europea ne dà quattordici: i trenta sono una nostra scelta. Il reso si chiede dalla pagina dell'ordine, e in Italia è gratuito."
+      },
+      {
+        "h": "Come scelgo la taglia",
+        "p": "Ogni scheda prodotto dice quanto è alta la modella e che taglia porta, e riporta come è vestita a chi l'ha comprato. La vestibilità è dritta con la spalla scesa: se la vuoi aderente, prendi una taglia sotto."
+      },
+      {
+        "h": "Come si paga",
+        "p": "Con carta, e con i metodi che Stripe mostra nel tuo paese. I dati della carta vanno da te a Stripe: questo sito non li vede mai e non li potrebbe salvare nemmeno volendo."
+      },
+      {
+        "h": "Scriveteci",
+        "p": "A ciao@lunaria.example, a un indirizzo che risponde una persona. Rispondiamo entro un giorno lavorativo.",
+        "tag": true
+      }
+    ]
+  },
+  "legal": {
+    "eyebrow": "Note legali",
+    "tag": "DA VERIFICARE CON UN LEGALE",
+    "backToHelp": "Torna all'aiuto",
+    "privacy": {
+      "title": "Informativa privacy",
+      "lede": "Cosa succede davvero ai tuoi dati su questo sito, scritto senza giri di parole.",
+      "sections": [
+        {
+          "h": "Cosa resta nel tuo browser",
+          "p": "Il carrello resta in questo browser finché non lo cancelli. I dati che scrivi alla cassa restano solo per la durata della visita e spariscono quando chiudi la scheda. Se usi la pagina dell'account, nome, indirizzo e numeri degli ordini restano in questo browser finché non premi «Cancella tutto». Niente di tutto questo arriva a noi."
+        },
+        {
+          "h": "Cosa arriva a Stripe",
+          "p": "Quando paghi, i dati della carta vanno direttamente a Stripe e non passano da questo sito. Insieme al pagamento inviamo a Stripe il tuo nome, la mail, l'indirizzo di spedizione e la lista dei capi: servono a fare l'ordine e a mandarti la ricevuta. Stripe è il responsabile del trattamento per questa parte e ha una sua informativa."
+        },
+        {
+          "h": "Cosa non facciamo",
+          "p": "Non c'è nessuno strumento di analisi, nessun pixel pubblicitario, nessun cookie di profilazione e nessun trasferimento a terzi oltre a Stripe. Le date delle lune sono calcolate dentro il tuo browser: nessun dato esce dal dispositivo per quello."
+        },
+        {
+          "h": "Cosa deve esserci in un negozio vero",
+          "p": "Titolare del trattamento con nome e indirizzo, base giuridica di ogni trattamento, tempi di conservazione, elenco dei responsabili, trasferimenti fuori dall'Unione europea, come esercitare i diritti previsti dagli articoli da 15 a 22 del GDPR e come fare reclamo al Garante. Questi testi vanno scritti e verificati da un avvocato prima di vendere.",
+          "tag": true
+        }
+      ]
+    },
+    "cookie": {
+      "title": "Cookie",
+      "lede": "Uno solo è nostro e ricorda in che lingua leggi. Gli altri li mette Stripe quando paghi.",
+      "sections": [
+        {
+          "h": "Il cookie della lingua",
+          "p": "Si chiama NEXT_LOCALE e contiene due lettere: it o en. Lo scriviamo quando cambi lingua, perché tornando sul sito tu non debba rifarlo ogni volta. Non identifica nessuno e non dice niente di te oltre a quale delle due versioni preferisci leggere."
+        },
+        {
+          "h": "I cookie di Stripe",
+          "p": "Durante il pagamento Stripe imposta i suoi, tecnici e antifrode. Sono necessari perché il pagamento funzioni e per riconoscere un tentativo di truffa."
+        },
+        {
+          "h": "Quello che non usa i cookie",
+          "p": "Il carrello, i dati della cassa e quello che il browser ricorda del tuo account non stanno in un cookie: stanno nella memoria locale e in quella di sessione, che restano nel dispositivo e non vengono spedite a nessun server a ogni richiesta. C'era anche un cookie per la modalità di lettura chiara o scura: quella funzione non c'è più, e se ce l'hai ancora addosso lo cancelliamo alla prossima visita."
+        },
+        {
+          "h": "Perché non c'è il banner",
+          "p": "Perché non c'è niente da chiedere. Un cookie che ricorda la lingua e i cookie tecnici di un sistema di pagamento non richiedono il consenso: la legge lo richiede per la profilazione, e qui non ce n'è. Un banner che lo chiede lo stesso è solo un ostacolo in più."
+        },
+        {
+          "h": "Quello che manca",
+          "p": "Un negozio vero che aggiunga strumenti di analisi o pubblicità deve pubblicare qui l'elenco completo con durata e finalità, e raccogliere il consenso prima di installarli. Questo testo va verificato da un avvocato.",
+          "tag": true
+        }
+      ]
+    },
+    "recesso": {
+      "title": "Diritto di recesso",
+      "lede": "Quattordici giorni te li dà la legge. Noi te ne diamo trenta, e questo è come funziona.",
+      "sections": [
+        {
+          "h": "Quanto tempo hai",
+          "p": "Trenta giorni da quando ricevi il pacco per dirci che hai cambiato idea, e altri quattordici per rispedircelo. Non devi dare una motivazione: te la chiediamo per capire cosa sbagliamo, ma puoi non rispondere."
+        },
+        {
+          "h": "Come si fa",
+          "p": "Dalla pagina del tuo ordine: scegli i capi, il motivo, e il sito prepara il messaggio. Ti rispondiamo entro un giorno lavorativo con le istruzioni. Puoi anche scriverci direttamente, va bene lo stesso."
+        },
+        {
+          "h": "Come deve tornare indietro",
+          "p": "Integro e con l'etichetta attaccata. Puoi provarlo come lo proveresti in un negozio: se è stato indossato davvero, portato fuori o lavato, non possiamo riprenderlo."
+        },
+        {
+          "h": "Chi paga la spedizione",
+          "p": "In Italia il reso è gratuito. Dall'estero il reso è a carico tuo, tranne quando il capo è arrivato difettoso o sbagliato: in quel caso paghiamo noi in ogni caso."
+        },
+        {
+          "h": "Quando ti ridiamo i soldi",
+          "p": "Entro quattordici giorni da quando riceviamo il reso, sullo stesso mezzo con cui hai pagato. Rimborsiamo anche la spedizione che avevi pagato all'andata, nella misura della spedizione standard."
+        },
+        {
+          "h": "Il modulo e i riferimenti di legge",
+          "p": "Un negozio vero deve pubblicare qui il modulo di recesso tipo scaricabile, i riferimenti agli articoli 52 e seguenti del Codice del consumo, le eccezioni al diritto di recesso e il link alla piattaforma europea ODR. Questi testi vanno scritti e verificati da un avvocato prima di vendere.",
+          "tag": true
+        }
+      ]
+    },
+    "termini": {
+      "title": "Condizioni di vendita",
+      "lede": "Cosa vale quando compri qui, e cosa manca ancora.",
+      "sections": [
+        {
+          "h": "I prezzi",
+          "p": "Sono in euro e IVA inclusa. La spedizione si vede nel riepilogo prima di pagare, mai dopo. Se un capo è scontato, accanto c'è il prezzo più basso che abbiamo applicato nei trenta giorni prima, come richiede la direttiva Omnibus."
+        },
+        {
+          "h": "Quando l'ordine è concluso",
+          "p": "Quando il pagamento va a buon fine e ti arriva la conferma con il numero d'ordine. Se un capo risulta esaurito dopo il pagamento, annulliamo quella riga e ti rimborsiamo: non ti mandiamo qualcos'altro al suo posto."
+        },
+        {
+          "h": "La garanzia",
+          "p": "Due anni di garanzia legale di conformità, come per qualsiasi acquisto da un venditore professionale nell'Unione europea. Riguarda i difetti, non il fatto che una taglia non vada: per quello c'è il recesso."
+        },
+        {
+          "h": "Questo negozio non vende",
+          "p": "LUNARIA è un marchio di fantasia. Non esiste una società con questo nome, i capi non sono in vendita, Stripe è in modalità di prova e nessun pagamento è reale."
+        },
+        {
+          "h": "Cosa deve esserci in un negozio vero",
+          "p": "Ragione sociale, sede legale, partita IVA, numero REA, PEC, foro competente, legge applicabile, procedura di reclamo, condizioni complete di consegna e pagamento e il link alla piattaforma europea ODR. Questi testi vanno scritti e verificati da un avvocato prima di vendere.",
+          "tag": true
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,603 @@
+{
+  "brand": {
+    "name": "LUNARIA",
+    "payoff": "A year you can wear."
+  },
+  "nav": {
+    "skip": "Skip to content",
+    "collections": "Collections",
+    "categories": "Categories",
+    "thirteenMoons": "Thirteen moons",
+    "circle": "The Circle",
+    "search": "Search",
+    "account": "Account",
+    "cart": "Cart",
+    "menu": "Menu",
+    "close": "Close",
+    "main": "Main navigation",
+    "tonightsMoon": "Tonight's moon",
+    "material": "Material",
+    "oracle": "The Oracle",
+    "shop": "The shop",
+    "yours": "Yours",
+    "orders": "Your orders",
+    "help": "Help and contact",
+    "brandCol": "The brand",
+    "language": "Language"
+  },
+  "lang": {
+    "toEn": "EN",
+    "toIt": "IT",
+    "switchToEn": "Switch to English",
+    "switchToIt": "Passa all'italiano"
+  },
+  "home": {
+    "title": "LUNARIA · A year you can wear",
+    "description": "The year has thirteen moons, not twelve months. Every moon leaves one garment, then passes. Thirteen releases a year, each one on the new moon."
+  },
+  "price": {
+    "lowest30": "Lowest price in the last 30 days",
+    "vatIncluded": "VAT included"
+  },
+  "footer": {
+    "fictional": "LUNARIA is a fictional brand. No company by this name exists, the garments are not for sale, and the imagery is AI generated.",
+    "esoteric": "The symbolic, astrological and tarot content has aesthetic, cultural and entertainment value. No therapeutic, medical, predictive or supernatural efficacy is claimed or implied.",
+    "legalTodo": "A real shop must publish company name, registered office, VAT number, company register number, certified email, privacy policy, terms of sale and the right of withdrawal here. These texts must be written and checked by a lawyer before selling.",
+    "legalTag": "TO BE CHECKED BY A LAWYER",
+    "help": "Help and contact",
+    "legal": "Legal notes",
+    "collections": "Collections",
+    "brandCol": "The brand",
+    "withdrawal": "Right of withdrawal",
+    "terms": "Terms of sale",
+    "privacy": "Privacy notice",
+    "cookies": "Cookies"
+  },
+  "collectionsIndex": {
+    "title": "The five collections · LUNARIA",
+    "description": "Five alphabets: phases, arcana, herbarium, sky chart, salt and iron. Every mark has a stated source.",
+    "eyebrow": "Five alphabets",
+    "heading": "Every symbol has a stated meaning.",
+    "lede": "Nothing goes on a garment without a line saying where it comes from. If we cannot say it, we do not print it.",
+    "see": "See {name}"
+  },
+  "plp": {
+    "size": "Size",
+    "colour": "Colour",
+    "availability": "Availability",
+    "onlyAvailable": "In stock only",
+    "sort": "Sort",
+    "sort_novita": "Newest",
+    "sort_prezzo-su": "Price low to high",
+    "sort_prezzo-giu": "Price high to low",
+    "sort_venduti": "Best selling",
+    "count": "{n, plural, =0 {No garments} one {One garment} other {# garments}}",
+    "shown": "Showing {shown} of {total}",
+    "loadMore": "Load more",
+    "prev": "Previous",
+    "pagination": "Pagination",
+    "clearFilters": "Clear all filters",
+    "soldOut": "Sold out",
+    "lowStock": "Last few",
+    "emptyTitle": "There is nothing here.",
+    "emptyBody": "No garment matches these filters. Remove one, or start from one of these collections.",
+    "categoryDescription": "Every LUNARIA garment in the {name} category, with sizes, materials and the meaning behind each mark."
+  },
+  "pdp": {
+    "breadcrumb": "Where you are",
+    "collections": "Collections",
+    "colour": "Colour",
+    "size": "Size",
+    "chooseSize": "Choose a size",
+    "addToCart": "Add to cart",
+    "added": "{name}, size {size}: added to the cart.",
+    "left": "{n} left",
+    "soldOut": "Sold out",
+    "lowStock": "Last few",
+    "notifyIntro": "Size {size} is gone.",
+    "notifyMe": "Notify me",
+    "notifyDone": "Done. We will write when it is back.",
+    "yourEmail": "Your email",
+    "demoNote": "This site is a demonstration: the address is not sent or stored anywhere.",
+    "lowest30": "Lowest price in the last 30 days",
+    "vatIncluded": "VAT included",
+    "delivery": "Estimated delivery in Italy: 2-4 working days · Free shipping over €120 · 30 days to change your mind",
+    "meaning": "The meaning",
+    "materials": "Material and care",
+    "composition": "Composition",
+    "weight": "Weight",
+    "origin": "Origin",
+    "care": "Care",
+    "textileNote": "Composition and labelling under European regulation 1007/2011 on textile products.",
+    "fit": "Fit",
+    "fitRating": "How it fits, according to buyers",
+    "fit_small": "Runs small",
+    "fit_true": "True to size",
+    "fit_large": "Runs large",
+    "fitSample": "Sample data from {n} answers. It becomes real when there are real purchases.",
+    "completeTheRite": "Complete the rite",
+    "sameCollection": "From the same collection: {name}",
+    "allIn": "Every garment in {name}"
+  },
+  "cart": {
+    "cart": "Cart",
+    "title": "Your cart",
+    "open": "Open the cart, {n, plural, =0 {empty} one {one garment} other {# garments}}",
+    "close": "Close",
+    "summary": "Order summary",
+    "emptyTitle": "The cart is still dark.",
+    "emptyBody": "There is nothing in it. The five collections are a good place to start.",
+    "emptyCta": "See the collections",
+    "shipGap": "{amount} to go for free shipping",
+    "shipFree": "Free shipping included",
+    "less": "One fewer",
+    "more": "One more",
+    "maxReason": "We have {n} in stock, no more",
+    "remove": "Remove",
+    "removed": "{name} removed",
+    "undo": "Undo",
+    "subtotal": "Total",
+    "vatInside": "VAT included: {amount}",
+    "shippingAtCheckout": "Shipping calculated at checkout, before you pay",
+    "items": "{n, plural, =0 {No garments} one {One garment} other {# garments}}",
+    "checkout": "Go to checkout",
+    "viewCart": "Open the full cart page"
+  },
+  "checkout": {
+    "title": "Checkout",
+    "stepsLabel": "Checkout steps",
+    "step_contatto": "Contact",
+    "step_spedizione": "Shipping",
+    "step_pagamento": "Payment",
+    "guestNote": "No account needed. If you want one, we offer it after the purchase.",
+    "email": "Email",
+    "emailHint": "We need it to send the confirmation and the tracking number.",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "address": "Address",
+    "address2": "Flat, entrance, buzzer",
+    "postcode": "Postcode",
+    "city": "City",
+    "province": "Province or state",
+    "country": "Country",
+    "phone": "Phone",
+    "phoneHint": "Only for the courier, if they need to call.",
+    "billingSame": "Billing address is the same",
+    "back": "Back",
+    "toShipping": "Continue to shipping",
+    "toPayment": "Continue to payment",
+    "edit": "edit",
+    "shippingTo": "Shipping to {name}, {address}.",
+    "summary": "Order summary",
+    "subtotal": "Garments",
+    "shipping": "Shipping",
+    "free": "Free",
+    "total": "Total",
+    "ofWhichVat": "VAT included",
+    "trustSecure": "Encrypted payment: card details go straight to Stripe, this site never sees them.",
+    "trustWithdrawal": "Fourteen days of withdrawal by law, thirty by our own choice.",
+    "trustContact": "A real email address to write to, not a form that disappears.",
+    "demoNote": "This shop is a demonstration. Stripe is in test mode: no money moves and no real card is charged.",
+    "errSummary": "{n, plural, one {There is one field to fix} other {There are # fields to fix}}",
+    "errEmailRequired": "An email address is needed.",
+    "errEmailFormat": "That address looks incomplete. Check the @.",
+    "errFirstName": "A first name is needed.",
+    "errLastName": "A last name is needed.",
+    "errLine1": "An address is needed.",
+    "errPostcode": "A postcode is needed.",
+    "errPostcodeIt": "An Italian postcode has five digits.",
+    "errCity": "A city is needed.",
+    "errCountry": "A country is needed.",
+    "emptyTitle": "The cart is empty.",
+    "emptyBody": "There is nothing to pay for. The five collections are a good place to start.",
+    "emptyCta": "See the collections",
+    "preparing": "Preparing the payment…",
+    "paying": "One moment…",
+    "payNow": "Pay {amount}",
+    "payFailed": "The payment did not go through.",
+    "testCard": "Test card: 4242 4242 4242 4242 · any future date · any CVC",
+    "noKey": "The Stripe key is missing: add NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY to .env.local.",
+    "setupFailed": "The payment could not be prepared ({reason}).",
+    "country_IT": "Italy",
+    "country_FR": "France",
+    "country_DE": "Germany",
+    "country_ES": "Spain",
+    "country_NL": "Netherlands",
+    "country_BE": "Belgium",
+    "country_AT": "Austria",
+    "country_PT": "Portugal",
+    "country_IE": "Ireland",
+    "country_GB": "United Kingdom",
+    "country_CH": "Switzerland",
+    "country_US": "United States"
+  },
+  "thanks": {
+    "eyebrow": "Order received",
+    "title": "Thank you.",
+    "body": "The order is registered. A summary is on its way by email.",
+    "bodyWithEmail": "The order is registered. The summary is going to {email}.",
+    "next": "What happens now",
+    "withdrawal": "Changing your mind",
+    "demoNote": "That was a test payment. No money moved, no parcel will be shipped, and the LUNARIA brand does not exist.",
+    "keepLooking": "Back to the collections",
+    "toAccount": "Go to your account",
+    "noRecordBody": "We cannot find this order. If you have just paid, this page's address may have lost the reference: look it up with the order number we emailed you.",
+    "findOrder": "Find your order"
+  },
+  "gpsr": {
+    "title": "Product safety and compliance",
+    "lead": "European regulation 2023/988, applicable since 13 December 2024, requires every product page to state the manufacturer, their address, a contact, the EU responsible person and a product identifier.",
+    "sku": "Identifier",
+    "manufacturer": "Manufacturer",
+    "address": "Postal address",
+    "email": "Contact",
+    "responsible": "EU responsible person",
+    "warnings": "Warnings",
+    "noWarnings": "No particular warnings for a cotton garment.",
+    "tag": "TO BE CHECKED BY A LAWYER"
+  },
+  "hero": {
+    "h1": "LUNARIA. A year you can wear.",
+    "band1H": "The year has thirteen moons, not twelve months.",
+    "band1P": "The calendar you use is a convention. This one is not.",
+    "band2H": "Every moon leaves one garment.",
+    "band2P": "When the moon passes the garment stays, and that is the end of it.",
+    "band3H": "Five alphabets.",
+    "band3P": "Phases. Arcana. Herbarium. Sky chart. Salt and iron.",
+    "band4H": "A year you can wear.",
+    "band4Fallback": "Thirteen releases a year, one on every new moon.",
+    "nextLine": "The next new moon is {day}{month}. {moon} is released.",
+    "ctaMoon": "See tonight's moon",
+    "ctaCollections": "The five collections",
+    "scroll": "Scroll",
+    "moonWord": "MOON",
+    "staticBody": "The year has thirteen moons, not twelve months. Every moon leaves one garment, and when the moon passes that garment is done."
+  },
+  "ticker": {
+    "payoff": "A year you can wear",
+    "illuminated": "Illuminated {pct}%",
+    "nextIn": "Next new moon in {days} days",
+    "liveRelease": "Live release · {moon}",
+    "shipping": "Free shipping over €120",
+    "returns": "30 days to change your mind"
+  },
+  "instrument": {
+    "eyebrow": "Right now",
+    "heading": "The line is here.",
+    "lede": "The terminator is the name of the line dividing light from shadow on the moon. It moves every night. When it reaches zero, something is released.",
+    "dialTitle": "The moon right now",
+    "phase": "Phase",
+    "illuminated": "Illuminated",
+    "age": "Age of cycle",
+    "cycleLength": "Length of this moon",
+    "nextNewMoon": "Next new moon",
+    "nextRelease": "Next release",
+    "remaining": "Time remaining",
+    "days": "days",
+    "dayShort": " d",
+    "yearClosed": "Year closed",
+    "seeCollection": "The collection of the next release"
+  },
+  "collectionsHome": {
+    "eyebrow": "Five alphabets",
+    "heading": "Every symbol has a stated meaning.",
+    "lede": "Nothing goes on a garment without a line saying where it comes from. If we cannot say it, we do not print it.",
+    "count": "{n, plural, one {# garment} other {# garments}}",
+    "see": "See {name}"
+  },
+  "meaning": {
+    "imageAlt": "Bone-white heavyweight cotton t-shirt laid on stone, printed with the Star card engraving in a single night-blue ink.",
+    "edition": "EDITION {n}",
+    "print": "One-colour screen print · 4 passes · water-based ink",
+    "cta": "See the page and the sizes"
+  },
+  "material": {
+    "eyebrow": "The material",
+    "heading": "240 grams. That is not a detail.",
+    "lede": "Light t-shirts crumple by the third wash and the print cracks. Ours weigh 240 grams per square metre, the cotton is combed and ring-spun, and the collar has a double rib that holds its shape. The print is water-based screen print, which sinks into the fibre instead of sitting on top of it.",
+    "caption": "Garment specification",
+    "legal": "We do not claim certifications until we hold them. Composition and labelling follow the European textile regulation.",
+    "imageAlt": "Macro of bone-white cotton jersey, the knit loops and the double rib lit by a raking cold light.",
+    "kComposition": "Composition",
+    "vComposition": "100% organic cotton",
+    "kWeight": "Weight",
+    "vWeight": "240 g/m²",
+    "kYarn": "Yarn",
+    "vYarn": "Combed, ring-spun",
+    "kYarnOrigin": "Yarn origin",
+    "vYarnOrigin": "Portugal",
+    "kMadeIn": "Made in",
+    "vMadeIn": "Portugal",
+    "kShrinkage": "Expected shrinkage",
+    "vShrinkage": "Under 3% at 30°C",
+    "kFit": "Fit",
+    "vFit": "Straight, dropped shoulder",
+    "kCare": "Care",
+    "vCare": "Inside out, 30°C, no tumble dryer"
+  },
+  "oracle": {
+    "eyebrow": "The Oracle",
+    "heading": "Hold until the line passes.",
+    "lede": "Three cards: intention, material, season. Twenty-seven possible readings, and three real garments at the end of each.",
+    "hold": "Press and hold",
+    "shuffle": "Shuffle the deck",
+    "shuffled": "Deck shuffled. Three new cards, face down.",
+    "count": "{n} possible readings",
+    "yourReading": "Your reading",
+    "see": "See the garment",
+    "disclaimer": "The Oracle is a game. It helps you pick a t-shirt, not predict anything. The symbolic content on this site has aesthetic and cultural value: we claim no therapeutic, medical, predictive or supernatural efficacy."
+  },
+  "moons": {
+    "eyebrow": "The thirteen moons",
+    "heading": "Thirteen lunar cycles fit in a solar year.",
+    "lede": "Every release falls on the new moon, when the terminator is at zero. What is gone stays gone: we do not reprint it to create pressure.",
+    "past": "Archive",
+    "live": "Live",
+    "next": "Coming",
+    "garments": "{n, plural, =0 {no garments} one {# garment} other {# garments}}",
+    "prev": "Show the earlier moons",
+    "next2": "Show the later moons"
+  },
+  "circle": {
+    "eyebrow": "The Circle",
+    "heading": "Enter the Circle.",
+    "promise": "The thirteen moons, early. Nothing else.",
+    "terms": "One email per new moon. Thirteen a year. You can leave with one click, and the link is at the bottom of every email.",
+    "email": "Your email",
+    "consent": "I have read how you handle my data and I want to receive the thirteen moons.",
+    "submit": "Enter",
+    "note": "This site is a demonstration: your address is not sent or stored anywhere. It stays in your browser window and disappears when you close it.",
+    "errEmail": "That address looks incomplete. Check the @.",
+    "errConsent": "We need the box below ticked before we can write to you.",
+    "done": "You are in. Next is {moon}, on {day} {month}."
+  },
+  "orders": {
+    "eyebrow": "Your orders",
+    "title": "Find an order",
+    "lede": "You need the order number and the email you used. No account required: they are the two things we sent you the moment you paid.",
+    "numberLabel": "Order number",
+    "numberHint": "Six characters after LN-, as they appear in the email.",
+    "numberInvalid": "An order number looks like this: LN- and six characters.",
+    "emailLabel": "The order's email",
+    "emailHint": "The one the receipt went to.",
+    "emailInvalid": "That address looks incomplete. Check the @.",
+    "search": "Find the order",
+    "searching": "One moment…",
+    "notFound": "No order with that number and that email. Check both against the receipt. If you paid in the last minute, wait a moment and try again: the search takes a little while to catch up.",
+    "unavailable": "We cannot read orders right now. Nothing to do with what you typed: try again shortly.",
+    "tooMany": "Too many tries in a row. Wait a minute and try again.",
+    "knownHere": "Orders placed from this browser",
+    "knownNote": "These numbers live here only, in this browser. On another device they are not there.",
+    "needHelp": "I cannot find my order",
+    "number": "Number",
+    "placedOn": "Placed on",
+    "status": "Status",
+    "status_paid": "Paid",
+    "status_processing": "Processing",
+    "status_unpaid": "Unpaid",
+    "status_failed": "Cancelled",
+    "subtotal": "Garments",
+    "shipping": "Shipping",
+    "free": "Free",
+    "total": "Total",
+    "ofWhichVat": "VAT included",
+    "shippingTo": "Shipped to",
+    "whatNext": "What happens now",
+    "whatNextBody": "We pack within two working days and write to you with the tracking number.",
+    "returnOpen": "You can change your mind until {date}.",
+    "returnClosed": "The window to change your mind on this order has closed.",
+    "demoNote": "This shop is a demonstration. Stripe is in test mode: no money moved and no parcel will be shipped."
+  },
+  "returns": {
+    "title": "Sending something back",
+    "lede": "Pick what you want to return and why. We write the message for you: your mail program opens with everything filled in, you read it and send it.",
+    "whichItems": "Which garments",
+    "why": "Why",
+    "reason_size": "The size is wrong",
+    "reason_expectation": "Not what I expected",
+    "reason_quality": "There is a fault",
+    "reason_wrong": "The wrong garment arrived",
+    "reason_changed": "I changed my mind",
+    "anythingElse": "Anything to add",
+    "send": "Write the message",
+    "pickSomething": "Tick at least one garment to return.",
+    "note": "The return reference is {reference}. There is nothing to print: we reply with the instructions within one working day.",
+    "mailSubject": "Return",
+    "mailIntro": "Hello, I would like to return part of this order.",
+    "mailOrder": "Order",
+    "mailReference": "Return reference",
+    "mailEmail": "Order email",
+    "mailItems": "Garments to return",
+    "mailReason": "Reason",
+    "mailNote": "Notes",
+    "mailClose": "Thank you."
+  },
+  "account": {
+    "eyebrow": "Your account",
+    "title": "Your account",
+    "lede": "This is where the browser remembers your details, so you do not retype them at checkout, and keeps the numbers of the orders placed from this device.",
+    "truth": "Said plainly: there is no password and no server of ours behind this page. Everything you see here is saved inside this browser. On another device, or after clearing this site's data, it is gone. The orders themselves are real: opening one needs the number and the email, from any device.",
+    "yourDetails": "Your details",
+    "yourDetailsBody": "What you write here is what the next checkout starts from.",
+    "email": "Email",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "address": "Address",
+    "postcode": "Postcode",
+    "city": "City",
+    "country": "Country",
+    "save": "Remember on this device",
+    "savedHere": "Saved in this browser.",
+    "yourOrders": "Your orders",
+    "ordersBody": "The numbers of the orders placed from here. Opening one also needs the email: the same thing we ask of anybody.",
+    "noOrders": "No order has been placed from this browser yet.",
+    "toCollections": "See the collections",
+    "open": "Open",
+    "forget": "Forget",
+    "yourData": "Your data, gone",
+    "yourDataBody": "Clear the name, the address and the order numbers from this browser. The orders stay valid: what disappears is the shortcut to them.",
+    "forgetAll": "Clear everything from this browser",
+    "country_IT": "Italy",
+    "country_FR": "France",
+    "country_DE": "Germany",
+    "country_ES": "Spain",
+    "country_NL": "Netherlands",
+    "country_BE": "Belgium",
+    "country_AT": "Austria",
+    "country_PT": "Portugal",
+    "country_IE": "Ireland",
+    "country_GB": "United Kingdom",
+    "country_CH": "Switzerland",
+    "country_US": "United States"
+  },
+  "help": {
+    "eyebrow": "Help",
+    "title": "Help and contact",
+    "lede": "The questions that come up most, with the actual answer rather than a sentence that circles it.",
+    "findOrder": "Find your order",
+    "sections": [
+      {
+        "h": "How do I see my order",
+        "p": "With the order number and the email you used, on the \"Find an order\" page. No account is needed, and there is none to create: they are the two things that reached you by email the moment you paid."
+      },
+      {
+        "h": "How long does it take",
+        "p": "We pack within two working days. In Italy delivery then takes two or three days, elsewhere in Europe three to six. We write with the tracking number when it leaves."
+      },
+      {
+        "h": "What does shipping cost",
+        "p": "€5.90 in Italy, €9.90 elsewhere in the European Union, €19.90 outside it. Free everywhere over €120. The cost is in the summary from the first step of checkout, not at the end."
+      },
+      {
+        "h": "Can I change my mind",
+        "p": "Yes, within thirty days of delivery. European law gives you fourteen: the thirty are our own choice. Returns are started from the order page, and within Italy they are free."
+      },
+      {
+        "h": "How do I pick a size",
+        "p": "Every product page says how tall the model is and which size she wears, and reports how it fitted the people who bought it. The cut is straight with a dropped shoulder: size down if you want it close to the body."
+      },
+      {
+        "h": "How do I pay",
+        "p": "By card, and with whatever methods Stripe offers in your country. Card details go from you to Stripe: this site never sees them and could not store them if it wanted to."
+      },
+      {
+        "h": "Write to us",
+        "p": "At ciao@lunaria.example, an address where a person answers. We reply within one working day.",
+        "tag": true
+      }
+    ]
+  },
+  "legal": {
+    "eyebrow": "Legal notes",
+    "tag": "TO BE CHECKED BY A LAWYER",
+    "backToHelp": "Back to help",
+    "privacy": {
+      "title": "Privacy notice",
+      "lede": "What actually happens to your data on this site, written without circling it.",
+      "sections": [
+        {
+          "h": "What stays in your browser",
+          "p": "The cart stays in this browser until you clear it. What you type at checkout stays only for the length of the visit and is gone when you close the tab. If you use the account page, your name, address and order numbers stay in this browser until you press \"Clear everything\". None of it reaches us."
+        },
+        {
+          "h": "What reaches Stripe",
+          "p": "When you pay, the card details go straight to Stripe and never pass through this site. Along with the payment we send Stripe your name, email, shipping address and the list of garments: they are what makes the order and the receipt. Stripe is the processor for that part and has its own notice."
+        },
+        {
+          "h": "What we do not do",
+          "p": "There is no analytics tool, no advertising pixel, no profiling cookie and no transfer to third parties beyond Stripe. The moon dates are calculated inside your browser: no data leaves the device for that."
+        },
+        {
+          "h": "What a real shop must publish",
+          "p": "The controller with name and address, the legal basis for every processing operation, retention periods, the list of processors, transfers outside the European Union, how to exercise the rights under GDPR articles 15 to 22, and how to complain to the supervisory authority. These texts must be written and checked by a lawyer before selling.",
+          "tag": true
+        }
+      ]
+    },
+    "cookie": {
+      "title": "Cookies",
+      "lede": "One is ours and remembers which language you read in. The rest are Stripe's, set when you pay.",
+      "sections": [
+        {
+          "h": "The language cookie",
+          "p": "It is called NEXT_LOCALE and holds two letters: it or en. We write it when you switch language, so coming back does not mean doing it again. It identifies nobody and says nothing about you beyond which of the two versions you prefer to read."
+        },
+        {
+          "h": "Stripe's cookies",
+          "p": "During payment Stripe sets its own, technical and anti-fraud. They are necessary for the payment to work and to spot an attempted fraud."
+        },
+        {
+          "h": "What does not use cookies",
+          "p": "The cart, what you type at checkout and what the browser remembers of your account are not in a cookie: they are in local and session storage, which stay on the device and are not sent to any server with every request. There was also a cookie for the light or dark reading mode: that feature is gone, and if you still carry one we clear it on your next visit."
+        },
+        {
+          "h": "Why there is no banner",
+          "p": "Because there is nothing to ask about. A cookie that remembers a language and a payment system's technical cookies need no consent: the law requires it for profiling, and there is none here. A banner that asks anyway is one more obstacle."
+        },
+        {
+          "h": "What is missing",
+          "p": "A real shop that adds analytics or advertising must publish the full list here with duration and purpose, and collect consent before installing them. This text must be checked by a lawyer.",
+          "tag": true
+        }
+      ]
+    },
+    "recesso": {
+      "title": "Right of withdrawal",
+      "lede": "Fourteen days are the law's. We give you thirty, and this is how it works.",
+      "sections": [
+        {
+          "h": "How long you have",
+          "p": "Thirty days from receiving the parcel to tell us you changed your mind, and another fourteen to send it back. You do not owe us a reason: we ask for one to learn what we get wrong, and you can leave it blank."
+        },
+        {
+          "h": "How to do it",
+          "p": "From your order page: pick the garments, pick the reason, and the site writes the message. We reply within one working day with the instructions. Writing to us directly works just as well."
+        },
+        {
+          "h": "How it has to come back",
+          "p": "Whole, with the tag still on. You can try it the way you would try it in a shop: if it has actually been worn, taken out or washed, we cannot take it back."
+        },
+        {
+          "h": "Who pays the postage",
+          "p": "Within Italy the return is free. From abroad the return is at your cost, except when the garment arrived faulty or wrong: then we pay either way."
+        },
+        {
+          "h": "When you get your money",
+          "p": "Within fourteen days of the return reaching us, by the same means you paid with. We refund the outbound shipping too, up to the standard rate."
+        },
+        {
+          "h": "The form and the legal references",
+          "p": "A real shop must publish here the downloadable model withdrawal form, the references to the consumer legislation that applies, the exceptions to the right of withdrawal, and the link to the European ODR platform. These texts must be written and checked by a lawyer before selling.",
+          "tag": true
+        }
+      ]
+    },
+    "termini": {
+      "title": "Terms of sale",
+      "lede": "What holds when you buy here, and what is still missing.",
+      "sections": [
+        {
+          "h": "Prices",
+          "p": "In euro, VAT included. Shipping appears in the summary before you pay, never after. When something is discounted, the lowest price we applied in the previous thirty days appears next to it, as the Omnibus directive requires."
+        },
+        {
+          "h": "When the order is concluded",
+          "p": "When the payment succeeds and the confirmation with the order number reaches you. If a garment turns out to be gone after payment, we cancel that line and refund it: we do not send you something else instead."
+        },
+        {
+          "h": "The guarantee",
+          "p": "Two years of legal conformity guarantee, as for any purchase from a professional seller in the European Union. It covers faults, not a size that does not fit: that is what withdrawal is for."
+        },
+        {
+          "h": "This shop does not sell",
+          "p": "LUNARIA is a fictional brand. No company by this name exists, the garments are not for sale, Stripe is in test mode and no payment is real."
+        },
+        {
+          "h": "What a real shop must publish",
+          "p": "Company name, registered office, VAT number, company register number, certified email, competent court, applicable law, complaints procedure, complete delivery and payment terms, and the link to the European ODR platform. These texts must be written and checked by a lawyer before selling.",
+          "tag": true
+        }
+      ]
+    }
+  }
+}

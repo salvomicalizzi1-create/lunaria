@@ -1,0 +1,91 @@
+/* Checkout: three steps, one summary that never leaves the screen. */
+
+@layer components {
+  .co { display: grid; gap: var(--spacing-7); padding-block: var(--spacing-7) var(--spacing-9); align-items: start; }
+  @media (min-width: 1024px) { .co { grid-template-columns: 1fr 380px; gap: var(--spacing-9); } }
+  .co__title { font-size: var(--text-h1); }
+
+  .steps { list-style: none; display: flex; flex-wrap: wrap; gap: var(--spacing-4); margin: var(--spacing-5) 0; padding: 0; }
+  .steps__i { font-size: var(--text-small); color: var(--fg-2); display: flex; align-items: center; gap: 8px; }
+  .steps__i span { color: var(--fg-2); }
+  .steps__i[aria-current='step'] { color: var(--fg); }
+  .steps__i[aria-current='step'] span { color: var(--accent); }
+
+  .co__step { display: flex; flex-direction: column; gap: var(--spacing-4); border-top: 1px solid var(--rule); padding-top: var(--spacing-5); }
+  .co__row { display: grid; gap: var(--spacing-4); }
+  @media (min-width: 600px) { .co__row { grid-template-columns: 1fr 1fr; } }
+  .co__guest { font-size: var(--text-small); color: var(--fg-2); }
+  .co__nav { display: flex; gap: var(--spacing-3); flex-wrap: wrap; margin-top: var(--spacing-3); }
+  .co__same { display: flex; gap: 12px; align-items: flex-start; font-size: var(--text-small); }
+  .co__same input { width: 24px; height: 24px; flex: none; accent-color: var(--accent); }
+  .co__ship { color: var(--fg-2); }
+  .co__edit { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+
+  /* ---------------------------------------------------------------- field */
+  .fld { display: flex; flex-direction: column; gap: 4px; position: relative; }
+  .fld__label {
+    font-size: var(--text-eyebrow); text-transform: uppercase;
+    letter-spacing: var(--tracking-eyebrow); color: var(--fg-2);
+  }
+  .fld:focus-within .fld__label { color: var(--accent); }
+  .fld[data-error='true'] .fld__label { color: var(--danger); }
+  .fld__input {
+    width: 100%;
+    /* 16px minimum, or iOS zooms the whole viewport on focus */
+    font-size: 16px; font-family: var(--font-body);
+    padding: 12px 2px; min-height: 44px;
+    color: var(--fg); background: transparent;
+    border: 0; border-bottom: 1px solid var(--rule-strong);
+    border-radius: var(--radius-none);
+  }
+  .fld__input:focus { outline: none; }
+  select.fld__input { padding-inline-start: 0; }
+  .fld__line {
+    position: absolute; left: 0; right: 0; bottom: 0; height: 1px;
+    background: var(--accent); transform: scaleX(0);
+    transition: transform var(--dur-base) var(--ease-out-quart);
+  }
+  .fld__input:focus ~ .fld__line, .fld__line[data-on='true'] { transform: scaleX(1); }
+  .fld__hint { font-size: var(--text-small); color: var(--fg-2); }
+  .fld__err { font-size: var(--text-small); color: var(--danger); }
+
+  .errsum {
+    border: 1px solid var(--danger); padding: var(--spacing-4);
+    margin-block: var(--spacing-4); display: flex; flex-direction: column; gap: var(--spacing-2);
+  }
+  .errsum:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+  .errsum__t { color: var(--danger); }
+  .errsum ul { margin: 0; padding-inline-start: var(--spacing-5); }
+  .errsum a { color: var(--danger); }
+
+  /* -------------------------------------------------------------- summary */
+  .co__summary {
+    border: 1px solid var(--rule); padding: var(--spacing-5);
+    display: flex; flex-direction: column; gap: var(--spacing-4);
+  }
+  @media (min-width: 1024px) { .co__summary { position: sticky; top: 96px; } }
+  .co__lines { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--spacing-3); }
+  .co__lines li { display: grid; grid-template-columns: 48px 1fr auto; gap: var(--spacing-3); align-items: center; font-size: var(--text-small); }
+  .co__lines img { width: 48px; height: 60px; object-fit: cover; background: var(--panel); }
+  .co__lines strong { font-family: var(--font-display); font-weight: 400; display: block; }
+  .co__lines .mono { color: var(--fg-2); font-size: 11px; }
+
+  .co__totals { margin: 0; border-top: 1px solid var(--rule); padding-top: var(--spacing-3); display: grid; gap: 8px; }
+  .co__totals > div { display: flex; justify-content: space-between; gap: var(--spacing-3); }
+  .co__totals dt { font-size: var(--text-small); color: var(--fg-2); }
+  .co__totals dd { margin: 0; }
+  .co__grand { border-top: 1px solid var(--rule); padding-top: 8px; font-size: 1.05rem; }
+  .co__grand dt { color: var(--fg); }
+  .co__grand dd { color: var(--gold); }
+
+  .trust { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; border-top: 1px solid var(--rule); padding-top: var(--spacing-3); }
+  .trust li { font-size: var(--text-small); color: var(--fg-2); display: flex; gap: 8px; }
+  .trust li::before { content: '·'; color: var(--sage); }
+  .co__demo { font-size: var(--text-small); color: var(--fg-2); border-left: 2px solid var(--rule); padding-left: var(--spacing-4); }
+
+  /* -------------------------------------------------------------- payment */
+  .pay { display: flex; flex-direction: column; gap: var(--spacing-4); }
+  .pay__cta { width: 100%; }
+  .pay__err { color: var(--danger); font-size: var(--text-small); }
+  .pay__test { color: var(--fg-2); }
+}

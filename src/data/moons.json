@@ -1,0 +1,119 @@
+[
+  {
+    "numeral": "I",
+    "name": {
+      "it": "Neve",
+      "en": "Snow"
+    },
+    "at": "2026-01-18T19:52Z",
+    "collection": "fasi"
+  },
+  {
+    "numeral": "II",
+    "name": {
+      "it": "Ghiaccio",
+      "en": "Ice"
+    },
+    "at": "2026-02-17T12:01Z",
+    "collection": "sale-e-ferro"
+  },
+  {
+    "numeral": "III",
+    "name": {
+      "it": "Linfa",
+      "en": "Sap"
+    },
+    "at": "2026-03-19T01:23Z",
+    "collection": "erbario"
+  },
+  {
+    "numeral": "IV",
+    "name": {
+      "it": "Semente",
+      "en": "Seed"
+    },
+    "at": "2026-04-17T11:51Z",
+    "collection": "erbario"
+  },
+  {
+    "numeral": "V",
+    "name": {
+      "it": "Fiore",
+      "en": "Flower"
+    },
+    "at": "2026-05-16T20:01Z",
+    "collection": "carta-del-cielo"
+  },
+  {
+    "numeral": "VI",
+    "name": {
+      "it": "Fieno",
+      "en": "Hay"
+    },
+    "at": "2026-06-15T02:54Z",
+    "collection": "fasi"
+  },
+  {
+    "numeral": "VII",
+    "name": {
+      "it": "Grano",
+      "en": "Grain"
+    },
+    "at": "2026-07-14T09:43Z",
+    "collection": "arcani"
+  },
+  {
+    "numeral": "VIII",
+    "name": {
+      "it": "Stoppie",
+      "en": "Stubble"
+    },
+    "at": "2026-08-12T17:36Z",
+    "collection": "arcani"
+  },
+  {
+    "numeral": "IX",
+    "name": {
+      "it": "Vendemmia",
+      "en": "Harvest"
+    },
+    "at": "2026-09-11T03:26Z",
+    "collection": "erbario"
+  },
+  {
+    "numeral": "X",
+    "name": {
+      "it": "Caccia",
+      "en": "Hunt"
+    },
+    "at": "2026-10-10T15:50Z",
+    "collection": "sale-e-ferro"
+  },
+  {
+    "numeral": "XI",
+    "name": {
+      "it": "Nebbia",
+      "en": "Mist"
+    },
+    "at": "2026-11-09T07:02Z",
+    "collection": "carta-del-cielo"
+  },
+  {
+    "numeral": "XII",
+    "name": {
+      "it": "Gelo",
+      "en": "Frost"
+    },
+    "at": "2026-12-09T00:51Z",
+    "collection": "sale-e-ferro"
+  },
+  {
+    "numeral": "XIII",
+    "name": {
+      "it": "Lunganotte",
+      "en": "Longnight"
+    },
+    "at": "2027-01-07T20:24Z",
+    "collection": "fasi"
+  }
+]

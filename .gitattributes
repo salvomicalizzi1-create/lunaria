@@ -1,0 +1,14 @@
+# I file di testo si depositano con fine-riga LF e si estraggono come servono
+# alla macchina. Senza questa regola, su Windows git avvisa a ogni aggiunta che
+# «LF sara sostituito da CRLF», e una modifica di un carattere sembra una
+# riscrittura di tutto il file.
+* text=auto eol=lf
+
+# Questi sono binari: toccarli sarebbe rovinarli.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.mp4 binary
+*.woff2 binary
+*.ico binary

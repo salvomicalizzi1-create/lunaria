@@ -1,0 +1,183 @@
+/* The product page: the one that pays for everything. */
+
+@layer components {
+  .crumbs {
+    display: flex; gap: var(--spacing-2); align-items: center;
+    padding-block: var(--spacing-5) 0;
+    font-size: var(--text-small); color: var(--fg-2);
+  }
+  /* 24x24 è il minimo delle WCAG 2.2 (2.5.8). Le briciole erano 60x21 e 39x21:
+     abbastanza grandi da leggersi, troppo piccole da colpire col pollice. Si
+     allarga l'area toccabile senza spostare di un pixel quello che si vede. */
+  .crumbs a {
+    text-decoration: none;
+    display: inline-flex; align-items: center;
+    min-height: 24px;
+  }
+  .crumbs a:hover { color: var(--fg); }
+
+  /* stessa ragione: era alto 17px */
+  .pdp__allcat { display: inline-flex; align-items: center; min-height: 24px; }
+
+  .pdp { display: grid; gap: var(--spacing-6); padding-block: var(--spacing-5) var(--spacing-9); }
+  @media (min-width: 1024px) {
+    /* gallery on the left holds still, the detail column scrolls past it */
+    .pdp { grid-template-columns: 1fr 1fr; gap: var(--spacing-9); align-items: start; }
+    .pdp__media { position: sticky; top: 96px; }
+  }
+
+  /* ------------------------------------------------------------- gallery */
+  .gal { display: flex; flex-direction: column; gap: var(--spacing-3); }
+  .gal__main { position: relative; aspect-ratio: 4 / 5; background: var(--panel); overflow: hidden; }
+  .gal__img { width: 100%; height: 100%; object-fit: cover; }
+  .gal__arrows {
+    position: absolute; inset-inline: var(--spacing-3); bottom: var(--spacing-3);
+    display: flex; justify-content: space-between; pointer-events: none;
+  }
+  .gal__arrow {
+    pointer-events: auto;
+    width: 44px; height: 44px;
+    display: inline-flex; align-items: center; justify-content: center;
+    border: 1px solid var(--rule-strong);
+    background: color-mix(in srgb, var(--canvas) 82%, transparent);
+    backdrop-filter: blur(6px);
+    color: var(--fg);
+  }
+  .gal__arrow:hover { border-color: var(--fg); }
+  .gal__rail { list-style: none; display: flex; gap: var(--spacing-2); margin: 0; padding: 0; overflow-x: auto; }
+  .gal__thumb {
+    width: 72px; aspect-ratio: 4 / 5; padding: 0;
+    border: 1px solid var(--rule); overflow: hidden;
+  }
+  .gal__thumb img { width: 100%; height: 100%; object-fit: cover; }
+  .gal__thumb[aria-current='true'] { border-color: var(--accent); }
+
+  /* -------------------------------------------------------------- detail */
+  .pdp__name { font-size: var(--text-h1); margin-block: var(--spacing-2) var(--spacing-3); }
+  .pdp__price { display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--spacing-3); font-size: 1.15rem; }
+  .pdp__vat { font-size: var(--text-eyebrow); text-transform: uppercase; letter-spacing: var(--tracking-eyebrow); color: var(--fg-2); }
+  .pdp__delivery { color: var(--fg-2); border-top: 1px solid var(--rule); padding-top: var(--spacing-4); margin-top: var(--spacing-5); }
+  .pdp__section { border-top: 1px solid var(--rule); padding-top: var(--spacing-5); margin-top: var(--spacing-6); }
+  .pdp__note { font-size: var(--text-small); color: var(--fg-2); margin-top: var(--spacing-3); }
+  .pdp__rail { border-top: 1px solid var(--rule); padding-block: var(--spacing-8); }
+  .pdp__back { padding-bottom: var(--spacing-9); }
+
+  /* the meaning block is the brand's whole differentiation, so it is set in
+     the display face and given room, not tucked into an accordion */
+  .meaning {
+    border-top: 1px solid var(--rule);
+    padding-top: var(--spacing-5);
+    margin-top: var(--spacing-6);
+  }
+  .meaning__body {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    line-height: 1.5;
+    max-width: var(--measure-quote);
+    margin-top: var(--spacing-3);
+  }
+
+  .spec { margin: var(--spacing-3) 0 0; display: grid; }
+  .spec > div {
+    display: flex; justify-content: space-between; gap: var(--spacing-4);
+    padding-block: 12px; border-bottom: 1px solid var(--rule);
+  }
+  .spec dt {
+    font-size: var(--text-eyebrow); text-transform: uppercase;
+    letter-spacing: var(--tracking-eyebrow); color: var(--fg-2);
+  }
+  .spec dd { margin: 0; text-align: right; }
+
+  /* ----------------------------------------------------------------- buy */
+  .buy { margin-top: var(--spacing-6); display: flex; flex-direction: column; gap: var(--spacing-5); }
+  .buy__set { border: 0; padding: 0; margin: 0; }
+  .buy__set legend { padding: 0; margin-bottom: var(--spacing-3); }
+  .buy__chosen { color: var(--fg); text-transform: none; letter-spacing: 0; }
+  .buy__swatches { display: flex; flex-wrap: wrap; gap: var(--spacing-2); }
+  .buy__swatch {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 8px 12px; border: 1px solid var(--rule-strong);
+    font-size: var(--text-small); color: var(--fg-2);
+  }
+  .buy__swatch span:first-child { width: 14px; height: 14px; border: 1px solid var(--rule-strong); }
+  .buy__swatch[aria-pressed='true'] { border-color: var(--accent); color: var(--accent); }
+  @media (pointer: coarse) { .buy__swatch { min-height: 44px; } }
+
+  .buy__sizes { display: flex; flex-wrap: wrap; gap: var(--spacing-2); }
+  .buy__size {
+    position: relative;
+    min-width: 56px; min-height: 48px;
+    display: inline-flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 2px;
+    border: 1px solid var(--rule-strong);
+    font-size: var(--text-small);
+    padding: 6px 10px;
+  }
+  .buy__size[aria-pressed='true'] { border-color: var(--accent); color: var(--accent); }
+  /* an unavailable size is a word plus a diagonal hairline, never a grey blur */
+  .buy__size[data-out='true'] { color: var(--fg-2); border-color: var(--rule); }
+  .buy__size[data-out='true']::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(to top right,
+      transparent calc(50% - 0.5px), currentColor calc(50% - 0.5px),
+      currentColor calc(50% + 0.5px), transparent calc(50% + 0.5px));
+    opacity: 0.55;
+  }
+  .buy__left { font-family: var(--font-mono); font-size: 9px; color: var(--gold); }
+
+  .notify {
+    margin-top: var(--spacing-4); padding: var(--spacing-4);
+    border: 1px solid var(--rule); display: flex; flex-direction: column; gap: var(--spacing-3);
+  }
+  .notify__form { display: flex; flex-wrap: wrap; gap: var(--spacing-2); }
+  .notify__input {
+    flex: 1 1 200px; min-height: 44px; padding: 10px 12px;
+    font-size: 16px; font-family: var(--font-body);
+    color: var(--fg); background: transparent;
+    border: 1px solid var(--rule-strong); border-radius: var(--radius-none);
+  }
+  .notify__ok { color: var(--sage); }
+  .notify__note { font-size: var(--text-small); color: var(--fg-2); }
+
+  .buy__actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--spacing-4); }
+  .buy__cta { flex: 1 1 240px; }
+  .buy__price { font-family: var(--font-mono); font-variant-numeric: tabular-nums; color: var(--gold); }
+  .buy__live { font-size: var(--text-small); color: var(--sage); min-height: 1.5em; }
+
+  /* ------------------------------------------------------- sticky bar */
+  /* height reserved before it appears, so it costs zero layout shift, and it
+     clears the home indicator on a phone */
+  .stickybar {
+    position: fixed; inset-inline: 0; bottom: 0; z-index: 30;
+    display: none;
+    align-items: center; gap: var(--spacing-3);
+    padding: var(--spacing-3) var(--layout-pad-mobile);
+    padding-bottom: calc(var(--spacing-3) + env(safe-area-inset-bottom));
+    background: color-mix(in srgb, var(--canvas) 94%, transparent);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid var(--rule);
+    transform: translateY(100%);
+    transition: transform var(--dur-base) var(--ease-out-quart);
+  }
+  .stickybar .btn { flex: 1; }
+  .stickybar__price { font-family: var(--font-mono); color: var(--gold); }
+  @media (max-width: 1023px) { .stickybar { display: flex; } }
+  .stickybar[data-show='true'] { transform: translateY(0); }
+
+  /* ---------------------------------------------------------------- fit */
+  .fitbar { list-style: none; margin: var(--spacing-4) 0 0; padding: 0; display: flex; flex-direction: column; gap: var(--spacing-2); }
+  .fitbar li { display: grid; grid-template-columns: 120px 1fr 44px; gap: var(--spacing-3); align-items: center; }
+  .fitbar__label { font-size: var(--text-small); color: var(--fg-2); }
+  .fitbar__track { height: 6px; background: var(--panel); border: 1px solid var(--rule); }
+  .fitbar__track span { display: block; height: 100%; background: var(--accent); opacity: 0.8; }
+  .fitbar__pct { text-align: right; color: var(--fg-2); }
+
+  /* --------------------------------------------------------------- GPSR */
+  .gpsr { border-top: 1px solid var(--rule); margin-top: var(--spacing-6); }
+  .gpsr__summary { padding-block: var(--spacing-4); cursor: pointer; list-style: none; }
+  .gpsr__summary::-webkit-details-marker { display: none; }
+  .gpsr__summary::after { content: ' +'; color: var(--fg-2); }
+  .gpsr[open] .gpsr__summary::after { content: ' −'; }
+  .gpsr__body { padding-bottom: var(--spacing-5); }
+  .gpsr__lead { font-size: var(--text-small); color: var(--fg-2); max-width: var(--measure-body); }
+}

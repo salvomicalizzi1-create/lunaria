@@ -1,0 +1,368 @@
+{
+  "axes": [
+    {
+      "id": "intenzione",
+      "label": {
+        "it": "Prima carta",
+        "en": "First card"
+      },
+      "title": {
+        "it": "Intenzione",
+        "en": "Intention"
+      }
+    },
+    {
+      "id": "materia",
+      "label": {
+        "it": "Seconda carta",
+        "en": "Second card"
+      },
+      "title": {
+        "it": "Materia",
+        "en": "Material"
+      }
+    },
+    {
+      "id": "stagione",
+      "label": {
+        "it": "Terza carta",
+        "en": "Third card"
+      },
+      "title": {
+        "it": "Stagione",
+        "en": "Season"
+      }
+    }
+  ],
+  "deck": {
+    "intenzione": [
+      {
+        "image": "intenzione",
+        "tag": "quotidiano",
+        "key": {
+          "it": "Ogni giorno",
+          "en": "Every day"
+        },
+        "value": {
+          "it": "Qualcosa da mettere sempre, non per un'occasione.",
+          "en": "Something to wear always, not for an occasion."
+        },
+        "reading": {
+          "it": "Vuoi qualcosa da mettere ogni giorno.",
+          "en": "You want something for every day."
+        },
+        "alt": {
+          "it": "Incisione di un bulbo appeso a un filo teso, in un solo inchiostro su carta invecchiata.",
+          "en": "Engraving of a bulb hanging from a taut thread, one ink on aged paper."
+        }
+      },
+      {
+        "image": "falena",
+        "tag": "sera",
+        "key": {
+          "it": "Le sere",
+          "en": "Evenings"
+        },
+        "value": {
+          "it": "Per quando esci tardi e torni con il freddo.",
+          "en": "For going out late and coming back in the cold."
+        },
+        "reading": {
+          "it": "Lo vuoi per le sere.",
+          "en": "You want it for the evenings."
+        },
+        "alt": {
+          "it": "Incisione di una falena ad ali aperte, tavola da collezione, un solo inchiostro su carta invecchiata.",
+          "en": "Engraving of a moth with open wings, specimen plate, one ink on aged paper."
+        }
+      },
+      {
+        "image": "chiave",
+        "tag": "riparo",
+        "key": {
+          "it": "Stare al riparo",
+          "en": "Staying covered"
+        },
+        "value": {
+          "it": "Un capo che ti chiude dentro e tiene fuori il resto.",
+          "en": "A garment that closes around you and keeps the rest out."
+        },
+        "reading": {
+          "it": "Cerchi qualcosa che ti chiuda dentro.",
+          "en": "You are after something that closes around you."
+        },
+        "alt": {
+          "it": "Incisione di una chiave di ferro antica, in un solo inchiostro su carta invecchiata.",
+          "en": "Engraving of an old iron key, one ink on aged paper."
+        }
+      }
+    ],
+    "materia": [
+      {
+        "image": "materia",
+        "tag": "cotone",
+        "key": {
+          "it": "Cotone pesante",
+          "en": "Heavy cotton"
+        },
+        "value": {
+          "it": "Duecentoquaranta grammi, tiene la forma dopo trenta lavaggi.",
+          "en": "Two hundred and forty grams, holds its shape after thirty washes."
+        },
+        "reading": {
+          "it": "In cotone pesante.",
+          "en": "In heavy cotton."
+        },
+        "alt": {
+          "it": "Incisione di un rocchetto di filo con un ago appoggiato, in un solo inchiostro su carta invecchiata.",
+          "en": "Engraving of a spool of thread with a needle resting against it, one ink on aged paper."
+        }
+      },
+      {
+        "image": "spola",
+        "tag": "tela",
+        "key": {
+          "it": "Tela e denim",
+          "en": "Canvas and denim"
+        },
+        "value": {
+          "it": "Trama fitta, si ammorbidisce solo portandola.",
+          "en": "Tight weave, it softens only by being worn."
+        },
+        "reading": {
+          "it": "In tela grezza.",
+          "en": "In raw canvas."
+        },
+        "alt": {
+          "it": "Incisione di una spola da telaio con il filo avvolto, in un solo inchiostro su carta invecchiata.",
+          "en": "Engraving of a weaver's shuttle with thread wound through it, one ink on aged paper."
+        }
+      },
+      {
+        "image": "lana",
+        "tag": "lana",
+        "key": {
+          "it": "Lana",
+          "en": "Wool"
+        },
+        "value": {
+          "it": "Filata lunga, calda anche quando è bagnata.",
+          "en": "Long staple, warm even when wet."
+        },
+        "reading": {
+          "it": "In lana.",
+          "en": "In wool."
+        },
+        "alt": {
+          "it": "Incisione di una matassa di lana intrecciata e legata al centro, in un solo inchiostro su carta invecchiata.",
+          "en": "Engraving of a braided skein of wool tied at the middle, one ink on aged paper."
+        }
+      }
+    ],
+    "stagione": [
+      {
+        "image": "stagione",
+        "tag": "mezza",
+        "key": {
+          "it": "Mezza stagione",
+          "en": "In between"
+        },
+        "value": {
+          "it": "Quando serve una cosa sola sopra, e basta.",
+          "en": "When one layer on top is enough."
+        },
+        "reading": {
+          "it": "Per la mezza stagione.",
+          "en": "For the in-between season."
+        },
+        "alt": {
+          "it": "Incisione di un ramo spoglio da un lato e con foglie dall'altro, in un solo inchiostro su carta invecchiata.",
+          "en": "Engraving of a branch, bare on one side and leafed on the other, one ink on aged paper."
+        }
+      },
+      {
+        "image": "ramo",
+        "tag": "freddo",
+        "key": {
+          "it": "Freddo",
+          "en": "Cold"
+        },
+        "value": {
+          "it": "Luce corta, strati, niente colore acceso.",
+          "en": "Short light, layers, no bright colour."
+        },
+        "reading": {
+          "it": "Per il freddo.",
+          "en": "For the cold."
+        },
+        "alt": {
+          "it": "Incisione di un ramo invernale spoglio con le gemme chiuse, in un solo inchiostro su carta invecchiata.",
+          "en": "Engraving of a bare winter twig with closed buds, one ink on aged paper."
+        }
+      },
+      {
+        "image": "artemisia",
+        "tag": "caldo",
+        "key": {
+          "it": "Caldo",
+          "en": "Warm"
+        },
+        "value": {
+          "it": "Poco addosso, e quel poco deve respirare.",
+          "en": "Little on you, and that little has to breathe."
+        },
+        "reading": {
+          "it": "Per il caldo.",
+          "en": "For warm weather."
+        },
+        "alt": {
+          "it": "Incisione di un rametto di artemisia in piena foglia e in fiore, in un solo inchiostro su carta invecchiata.",
+          "en": "Engraving of an artemisia sprig in full leaf and flower, one ink on aged paper."
+        }
+      }
+    ]
+  },
+  "tagsBySlug": {
+    "fasi-otto-lune": [
+      "quotidiano",
+      "cotone",
+      "caldo",
+      "mezza"
+    ],
+    "fasi-terminatore": [
+      "quotidiano",
+      "cotone",
+      "caldo",
+      "mezza"
+    ],
+    "fasi-tote": [
+      "quotidiano",
+      "tela",
+      "caldo",
+      "mezza",
+      "freddo"
+    ],
+    "fasi-calze": [
+      "quotidiano",
+      "cotone",
+      "freddo",
+      "mezza"
+    ],
+    "fasi-felpa-luna-nuova": [
+      "quotidiano",
+      "cotone",
+      "freddo",
+      "mezza"
+    ],
+    "arcani-xvii-la-stella": [
+      "quotidiano",
+      "cotone",
+      "mezza",
+      "caldo"
+    ],
+    "arcani-xiii-il-passo": [
+      "sera",
+      "cotone",
+      "freddo"
+    ],
+    "arcani-i-il-bagatto": [
+      "quotidiano",
+      "cotone",
+      "caldo",
+      "mezza"
+    ],
+    "arcani-ix-lermita": [
+      "sera",
+      "cotone",
+      "freddo",
+      "riparo"
+    ],
+    "arcani-xxi-il-mondo": [
+      "quotidiano",
+      "cotone",
+      "caldo"
+    ],
+    "erbario-artemisia": [
+      "quotidiano",
+      "tela",
+      "mezza",
+      "freddo"
+    ],
+    "erbario-verbena": [
+      "sera",
+      "lana",
+      "freddo"
+    ],
+    "erbario-ruta": [
+      "quotidiano",
+      "tela",
+      "mezza",
+      "caldo"
+    ],
+    "erbario-iperico": [
+      "sera",
+      "lana",
+      "freddo",
+      "riparo"
+    ],
+    "erbario-alloro": [
+      "quotidiano",
+      "tela",
+      "mezza",
+      "caldo"
+    ],
+    "cielo-dodici-case": [
+      "quotidiano",
+      "tela",
+      "caldo",
+      "sera"
+    ],
+    "cielo-eclittica": [
+      "quotidiano",
+      "cotone",
+      "caldo",
+      "mezza"
+    ],
+    "cielo-felpa-nodo": [
+      "quotidiano",
+      "cotone",
+      "freddo",
+      "mezza"
+    ],
+    "cielo-meridiano": [
+      "quotidiano",
+      "cotone",
+      "caldo"
+    ],
+    "cielo-cappuccio-zenit": [
+      "riparo",
+      "cotone",
+      "freddo",
+      "sera"
+    ],
+    "sale-chiave": [
+      "riparo",
+      "tela",
+      "mezza",
+      "freddo"
+    ],
+    "sale-jeans-linea": [
+      "quotidiano",
+      "tela",
+      "mezza",
+      "freddo"
+    ],
+    "sale-berretto": [
+      "riparo",
+      "tela",
+      "freddo",
+      "quotidiano"
+    ],
+    "sale-archivio-soglia": [
+      "riparo",
+      "tela",
+      "freddo",
+      "sera"
+    ]
+  }
+}

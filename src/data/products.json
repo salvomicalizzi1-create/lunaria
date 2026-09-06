@@ -1,0 +1,2009 @@
+[
+  {
+    "id": "p01",
+    "slug": "fasi-otto-lune",
+    "collection": "fasi",
+    "category": "t-shirt",
+    "name": {
+      "it": "Otto lune",
+      "en": "Eight moons"
+    },
+    "priceCents": 5800,
+    "gsm": 240,
+    "releasedOn": "2026-08-12",
+    "bestseller": true,
+    "variants": [
+      {
+        "id": "osso",
+        "colour": {
+          "it": "Bianco osso",
+          "en": "Bone white"
+        },
+        "hex": "#F2F0EA",
+        "sizes": [
+          {
+            "size": "XS",
+            "availability": {
+              "state": "out-of-stock"
+            }
+          },
+          {
+            "size": "S",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "M",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "L",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "XL",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "XXL",
+            "availability": {
+              "state": "low-stock",
+              "left": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "notte",
+        "colour": {
+          "it": "Blu notte",
+          "en": "Night blue"
+        },
+        "hex": "#131A2E",
+        "sizes": [
+          {
+            "size": "XS",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "S",
+            "availability": {
+              "state": "low-stock",
+              "left": 3
+            }
+          },
+          {
+            "size": "M",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "L",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "XL",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "XXL",
+            "availability": {
+              "state": "in-stock"
+            }
+          }
+        ]
+      }
+    ],
+    "composition": {
+      "it": "100% cotone organico",
+      "en": "100% organic cotton"
+    },
+    "origin": {
+      "it": "Filato Portogallo, confezione Portogallo",
+      "en": "Yarn Portugal, made in Portugal"
+    },
+    "care": {
+      "it": "A rovescio, 30°C, niente asciugatrice",
+      "en": "Inside out, 30°C, no tumble dryer"
+    },
+    "meaning": {
+      "it": "Le otto fasi in fila, dalla luna nuova alla nuova successiva. Ogni cerchio ha il terminatore nella posizione esatta di quella fase: non sono decorazioni, sono misure. Chi le guarda in ordine sta leggendo ventinove giorni e mezzo di cielo, compressi in dieci centimetri di stampa.",
+      "en": "The eight phases in a row, from one new moon to the next. Every circle carries the terminator at the exact position of that phase: they are measurements, not decoration. Read in order they are twenty-nine and a half days of sky, compressed into ten centimetres of print."
+    },
+    "image": "/images/collections/fasi.jpg"
+  },
+  {
+    "id": "p02",
+    "slug": "fasi-terminatore",
+    "collection": "fasi",
+    "category": "t-shirt",
+    "name": {
+      "it": "Terminatore",
+      "en": "Terminator"
+    },
+    "priceCents": 6200,
+    "gsm": 240,
+    "releasedOn": "2026-07-14",
+    "variants": [
+      {
+        "id": "osso",
+        "colour": {
+          "it": "Bianco osso",
+          "en": "Bone white"
+        },
+        "hex": "#F2F0EA",
+        "sizes": [
+          {
+            "size": "XS",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "S",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "M",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "L",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "XL",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "XXL",
+            "availability": {
+              "state": "out-of-stock"
+            }
+          }
+        ]
+      }
+    ],
+    "composition": {
+      "it": "100% cotone organico",
+      "en": "100% organic cotton"
+    },
+    "origin": {
+      "it": "Filato Portogallo, confezione Portogallo",
+      "en": "Yarn Portugal, made in Portugal"
+    },
+    "care": {
+      "it": "A rovescio, 30°C, niente asciugatrice",
+      "en": "Inside out, 30°C, no tumble dryer"
+    },
+    "meaning": {
+      "it": "Il terminatore è il nome vero della riga che divide la luce dall'ombra su un corpo celeste. Non è un confine fisso: si sposta ogni notte, e quello che ieri era buio oggi si vede. La stampa mostra solo quella linea, senza il cerchio attorno.",
+      "en": "The terminator is the real name of the line dividing light from shadow on a celestial body. It is not a fixed border: it moves every night, and what was dark yesterday is visible today. The print shows only that line, without the circle around it."
+    },
+    "image": "/images/collections/fasi.jpg"
+  },
+  {
+    "id": "p03",
+    "slug": "fasi-tote",
+    "collection": "fasi",
+    "category": "accessori",
+    "name": {
+      "it": "Tote Fasi",
+      "en": "Phases tote"
+    },
+    "priceCents": 4200,
+    "gsm": 340,
+    "releasedOn": "2026-06-15",
+    "bestseller": true,
+    "variants": [
+      {
+        "id": "naturale",
+        "colour": {
+          "it": "Tela naturale",
+          "en": "Natural canvas"
+        },
+        "hex": "#E8E5DC",
+        "sizes": [
+          {
+            "size": "Taglia unica",
+            "availability": {
+              "state": "in-stock"
+            }
+          }
+        ]
+      }
+    ],
+    "composition": {
+      "it": "100% cotone, tela pesante",
+      "en": "100% cotton, heavy canvas"
+    },
+    "origin": {
+      "it": "India",
+      "en": "India"
+    },
+    "care": {
+      "it": "30°C, stiratura a rovescio sulla stampa",
+      "en": "30°C, iron the print from the back"
+    },
+    "meaning": {
+      "it": "La stessa fila di fasi della t-shirt, stampata sul fondo della borsa invece che sul davanti. Si vede quando la posi, non quando la porti. È una scelta: il segno sta lì per te, non per chi ti guarda passare.",
+      "en": "The same row of phases as the t-shirt, printed on the base of the bag instead of the front. You see it when you set it down, not when you carry it. That is deliberate: the mark is there for you, not for people watching you pass."
+    },
+    "image": "/images/collections/fasi.jpg"
+  },
+  {
+    "id": "p04",
+    "slug": "fasi-calze",
+    "collection": "fasi",
+    "category": "accessori",
+    "name": {
+      "it": "Calze Fasi",
+      "en": "Phases socks"
+    },
+    "priceCents": 1800,
+    "releasedOn": "2026-05-16",
+    "variants": [
+      {
+        "id": "notte",
+        "colour": {
+          "it": "Blu notte",
+          "en": "Night blue"
+        },
+        "hex": "#131A2E",
+        "sizes": [
+          {
+            "size": "36-39",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "40-43",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "44-47",
+            "availability": {
+              "state": "out-of-stock"
+            }
+          }
+        ]
+      }
+    ],
+    "composition": {
+      "it": "78% cotone, 20% poliammide, 2% elastan",
+      "en": "78% cotton, 20% polyamide, 2% elastane"
+    },
+    "origin": {
+      "it": "Italia",
+      "en": "Italy"
+    },
+    "care": {
+      "it": "30°C, niente ammorbidente",
+      "en": "30°C, no fabric softener"
+    },
+    "meaning": {
+      "it": "Una fase per calza, e non la stessa: una porta la luna crescente, l'altra la calante. Indossandole formi un ciclo intero. È il dettaglio più piccolo della collezione e quello che nota solo chi si toglie le scarpe in casa tua.",
+      "en": "One phase per sock, and not the same one: one carries the waxing moon, the other the waning. Worn together they make a whole cycle. It is the smallest detail in the collection and the one only people who take their shoes off at your place will notice."
+    },
+    "image": "/images/collections/fasi.jpg"
+  },
+  {
+    "id": "p05",
+    "slug": "fasi-felpa-luna-nuova",
+    "collection": "fasi",
+    "category": "felpe",
+    "name": {
+      "it": "Felpa Luna nuova",
+      "en": "New moon sweatshirt"
+    },
+    "priceCents": 11800,
+    "compareAtCents": 13800,
+    "lowest30Cents": 12800,
+    "gsm": 400,
+    "releasedOn": "2026-04-17",
+    "variants": [
+      {
+        "id": "osso",
+        "colour": {
+          "it": "Bianco osso",
+          "en": "Bone white"
+        },
+        "hex": "#F2F0EA",
+        "sizes": [
+          {
+            "size": "XS",
+            "availability": {
+              "state": "low-stock",
+              "left": 2
+            }
+          },
+          {
+            "size": "S",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "M",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "L",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "XL",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "XXL",
+            "availability": {
+              "state": "low-stock",
+              "left": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": "grigio",
+        "colour": {
+          "it": "Grigio pietra",
+          "en": "Stone grey"
+        },
+        "hex": "#A9B4CC",
+        "sizes": [
+          {
+            "size": "XS",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "S",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "M",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "L",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "XL",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "XXL",
+            "availability": {
+              "state": "in-stock"
+            }
+          }
+        ]
+      }
+    ],
+    "composition": {
+      "it": "80% cotone organico, 20% poliestere riciclato",
+      "en": "80% organic cotton, 20% recycled polyester"
+    },
+    "origin": {
+      "it": "Portogallo",
+      "en": "Portugal"
+    },
+    "care": {
+      "it": "30°C, asciugatura in piano",
+      "en": "30°C, dry flat"
+    },
+    "meaning": {
+      "it": "Sul petto non c'è niente. La luna nuova è la fase in cui la faccia illuminata è girata dall'altra parte, quindi non si vede nulla, e questa felpa lo prende alla lettera. L'unico segno è cucito dentro, sul collo.",
+      "en": "There is nothing on the chest. The new moon is the phase where the lit face is turned away, so nothing is visible, and this sweatshirt takes that literally. The only mark is stitched inside, at the collar."
+    },
+    "image": "/images/collections/fasi.jpg"
+  },
+  {
+    "id": "p06",
+    "slug": "arcani-xvii-la-stella",
+    "collection": "arcani",
+    "category": "t-shirt",
+    "name": {
+      "it": "XVII · La Stella",
+      "en": "XVII · The Star"
+    },
+    "priceCents": 8800,
+    "gsm": 240,
+    "edition": "XVII / XXII",
+    "releasedOn": "2026-08-12",
+    "bestseller": true,
+    "variants": [
+      {
+        "id": "osso",
+        "colour": {
+          "it": "Bianco osso",
+          "en": "Bone white"
+        },
+        "hex": "#F2F0EA",
+        "sizes": [
+          {
+            "size": "XS",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "S",
+            "availability": {
+              "state": "out-of-stock"
+            }
+          },
+          {
+            "size": "M",
+            "availability": {
+              "state": "low-stock",
+              "left": 4
+            }
+          },
+          {
+            "size": "L",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "XL",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "XXL",
+            "availability": {
+              "state": "in-stock"
+            }
+          }
+        ]
+      }
+    ],
+    "composition": {
+      "it": "100% cotone organico pettinato",
+      "en": "100% combed organic cotton"
+    },
+    "origin": {
+      "it": "Filato Portogallo, confezione Portogallo",
+      "en": "Yarn Portugal, made in Portugal"
+    },
+    "care": {
+      "it": "A rovescio, 30°C, niente asciugatrice",
+      "en": "Inside out, 30°C, no tumble dryer"
+    },
+    "meaning": {
+      "it": "La diciassettesima carta mostra una figura che versa acqua in uno stagno mentre sopra di lei le stelle stanno ferme. Non promette niente. Dice soltanto che dopo il crollo della carta precedente qualcuno si è fermato a versare acqua. La stampa riprende un'incisione ottocentesca, ridisegnata linea per linea, in un solo inchiostro.",
+      "en": "The seventeenth card shows a figure pouring water into a pool while above her the stars hold still. It promises nothing. It says only that after the collapse of the card before it, someone stopped to pour water. The print follows a nineteenth century engraving, redrawn line by line, in a single ink."
+    },
+    "image": "/images/products/arcani-xvii.jpg",
+    "images": [
+      "/images/products/arcani-xvii.jpg",
+      "/images/collections/arcani.jpg"
+    ],
+    "fitNote": {
+      "it": "La modella è alta 1,74 m e indossa la M. Vestibilità dritta, spalla scesa: se la vuoi aderente prendi una taglia sotto.",
+      "en": "The model is 1.74 m and wears the M. Straight fit, dropped shoulder: size down if you want it close to the body."
+    },
+    "fitVotes": {
+      "small": 4,
+      "true": 38,
+      "large": 9
+    }
+  },
+  {
+    "id": "p07",
+    "slug": "arcani-xiii-il-passo",
+    "collection": "arcani",
+    "category": "felpe",
+    "name": {
+      "it": "XIII · Il Passo",
+      "en": "XIII · The Step"
+    },
+    "priceCents": 12800,
+    "gsm": 400,
+    "edition": "XIII / XXII",
+    "releasedOn": "2026-07-14",
+    "variants": [
+      {
+        "id": "notte",
+        "colour": {
+          "it": "Blu notte",
+          "en": "Night blue"
+        },
+        "hex": "#131A2E",
+        "sizes": [
+          {
+            "size": "XS",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "S",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "M",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "L",
+            "availability": {
+              "state": "low-stock",
+              "left": 3
+            }
+          },
+          {
+            "size": "XL",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "XXL",
+            "availability": {
+              "state": "in-stock"
+            }
+          }
+        ]
+      }
+    ],
+    "composition": {
+      "it": "80% cotone organico, 20% poliestere riciclato",
+      "en": "80% organic cotton, 20% recycled polyester"
+    },
+    "origin": {
+      "it": "Portogallo",
+      "en": "Portugal"
+    },
+    "care": {
+      "it": "30°C, asciugatura in piano",
+      "en": "30°C, dry flat"
+    },
+    "meaning": {
+      "it": "La tredicesima carta nei mazzi antichi non ha nome scritto. Non significa la fine: significa che qualcosa smette e qualcos'altro comincia nello stesso momento. Abbiamo lasciato lo spazio del titolo vuoto, come nelle stampe originali del Settecento.",
+      "en": "In old decks the thirteenth card carries no written name. It does not mean the end: it means one thing stops and another begins at the same moment. We left the title space empty, as in the original eighteenth century prints."
+    },
+    "image": "/images/collections/arcani.jpg"
+  },
+  {
+    "id": "p08",
+    "slug": "arcani-i-il-bagatto",
+    "collection": "arcani",
+    "category": "t-shirt",
+    "name": {
+      "it": "I · Il Bagatto",
+      "en": "I · The Magician"
+    },
+    "priceCents": 8800,
+    "gsm": 240,
+    "edition": "I / XXII",
+    "releasedOn": "2026-06-15",
+    "variants": [
+      {
+        "id": "osso",
+        "colour": {
+          "it": "Bianco osso",
+          "en": "Bone white"
+        },
+        "hex": "#F2F0EA",
+        "sizes": [
+          {
+            "size": "XS",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "S",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "M",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "L",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "XL",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "XXL",
+            "availability": {
+              "state": "in-stock"
+            }
+          }
+        ]
+      },
+      {
+        "id": "rosa",
+        "colour": {
+          "it": "Rosa cenere",
+          "en": "Ash rose"
+        },
+        "hex": "#E3B7C4",
+        "sizes": [
+          {
+            "size": "XS",
+            "availability": {
+              "state": "out-of-stock"
+            }
+          },
+          {
+            "size": "S",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "M",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "L",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "XL",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "XXL",
+            "availability": {
+              "state": "out-of-stock"
+            }
+          }
+        ]
+      }
+    ],
+    "composition": {
+      "it": "100% cotone organico pettinato",
+      "en": "100% combed organic cotton"
+    },
+    "origin": {
+      "it": "Filato Portogallo, confezione Portogallo",
+      "en": "Yarn Portugal, made in Portugal"
+    },
+    "care": {
+      "it": "A rovescio, 30°C, niente asciugatrice",
+      "en": "Inside out, 30°C, no tumble dryer"
+    },
+    "meaning": {
+      "it": "La prima carta mostra un tavolo con sopra degli attrezzi e una persona in piedi davanti. Nei mazzi più vecchi non è un mago: è un artigiano ambulante, uno che apre il banco e lavora. Abbiamo stampato solo il tavolo e gli attrezzi.",
+      "en": "The first card shows a table with tools on it and a person standing before it. In the oldest decks he is not a magician: he is a travelling craftsman, someone who sets up a stall and works. We printed only the table and the tools."
+    },
+    "image": "/images/collections/arcani.jpg"
+  },
+  {
+    "id": "p09",
+    "slug": "arcani-ix-lermita",
+    "collection": "arcani",
+    "category": "felpe",
+    "name": {
+      "it": "IX · L'Eremita",
+      "en": "IX · The Hermit"
+    },
+    "priceCents": 12800,
+    "gsm": 400,
+    "edition": "IX / XXII",
+    "releasedOn": "2026-05-16",
+    "variants": [
+      {
+        "id": "grigio",
+        "colour": {
+          "it": "Grigio pietra",
+          "en": "Stone grey"
+        },
+        "hex": "#A9B4CC",
+        "sizes": [
+          {
+            "size": "XS",
+            "availability": {
+              "state": "out-of-stock"
+            }
+          },
+          {
+            "size": "S",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "M",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "L",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "XL",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "XXL",
+            "availability": {
+              "state": "in-stock"
+            }
+          }
+        ]
+      }
+    ],
+    "composition": {
+      "it": "80% cotone organico, 20% poliestere riciclato",
+      "en": "80% organic cotton, 20% recycled polyester"
+    },
+    "origin": {
+      "it": "Portogallo",
+      "en": "Portugal"
+    },
+    "care": {
+      "it": "30°C, asciugatura in piano",
+      "en": "30°C, dry flat"
+    },
+    "meaning": {
+      "it": "Un uomo con una lanterna, di notte, fermo. Nelle letture moderne è la solitudine; nei mazzi del Settecento la lanterna serviva a farsi vedere dagli altri, non a vedere. Abbiamo stampato la lanterna da sola, sul cappuccio.",
+      "en": "A man with a lantern, at night, standing still. Modern readings call it solitude; in eighteenth century decks the lantern was for being seen by others, not for seeing. We printed the lantern alone, on the hood."
+    },
+    "image": "/images/collections/arcani.jpg"
+  },
+  {
+    "id": "p10",
+    "slug": "arcani-xxi-il-mondo",
+    "collection": "arcani",
+    "category": "t-shirt",
+    "name": {
+      "it": "XXI · Il Mondo",
+      "en": "XXI · The World"
+    },
+    "priceCents": 9800,
+    "gsm": 240,
+    "edition": "XXI / XXII",
+    "releasedOn": "2026-03-19",
+    "variants": [
+      {
+        "id": "osso",
+        "colour": {
+          "it": "Bianco osso",
+          "en": "Bone white"
+        },
+        "hex": "#F2F0EA",
+        "sizes": [
+          {
+            "size": "XS",
+            "availability": {
+              "state": "out-of-stock"
+            }
+          },
+          {
+            "size": "S",
+            "availability": {
+              "state": "out-of-stock"
+            }
+          },
+          {
+            "size": "M",
+            "availability": {
+              "state": "out-of-stock"
+            }
+          },
+          {
+            "size": "L",
+            "availability": {
+              "state": "out-of-stock"
+            }
+          },
+          {
+            "size": "XL",
+            "availability": {
+              "state": "out-of-stock"
+            }
+          },
+          {
+            "size": "XXL",
+            "availability": {
+              "state": "out-of-stock"
+            }
+          }
+        ]
+      }
+    ],
+    "composition": {
+      "it": "100% cotone organico pettinato",
+      "en": "100% combed organic cotton"
+    },
+    "origin": {
+      "it": "Filato Portogallo, confezione Portogallo",
+      "en": "Yarn Portugal, made in Portugal"
+    },
+    "care": {
+      "it": "A rovescio, 30°C, niente asciugatrice",
+      "en": "Inside out, 30°C, no tumble dryer"
+    },
+    "meaning": {
+      "it": "L'ultima carta è una ghirlanda ovale con dentro una figura e ai quattro angoli quattro animali. Chiude il mazzo, e nei mazzi antichi la ghirlanda è disegnata aperta in un punto. Abbiamo stampato solo la ghirlanda, con la sua apertura.",
+      "en": "The last card is an oval wreath with a figure inside and four animals at the corners. It closes the deck, and in old decks the wreath is drawn open at one point. We printed only the wreath, with its opening."
+    },
+    "image": "/images/collections/arcani.jpg"
+  },
+  {
+    "id": "p11",
+    "slug": "erbario-artemisia",
+    "collection": "erbario",
+    "category": "camicie",
+    "name": {
+      "it": "Artemisia",
+      "en": "Artemisia"
+    },
+    "priceCents": 14800,
+    "gsm": 180,
+    "releasedOn": "2026-09-11",
+    "variants": [
+      {
+        "id": "osso",
+        "colour": {
+          "it": "Bianco osso",
+          "en": "Bone white"
+        },
+        "hex": "#F2F0EA",
+        "sizes": [
+          {
+            "size": "XS",
+            "availability": {
+              "state": "low-stock",
+              "left": 2
+            }
+          },
+          {
+            "size": "S",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "M",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "L",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "XL",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "XXL",
+            "availability": {
+              "state": "in-stock"
+            }
+          }
+        ]
+      },
+      {
+        "id": "salvia",
+        "colour": {
+          "it": "Salvia",
+          "en": "Sage"
+        },
+        "hex": "#7E9E8E",
+        "sizes": [
+          {
+            "size": "XS",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "S",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "M",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "L",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "XL",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "XXL",
+            "availability": {
+              "state": "in-stock"
+            }
+          }
+        ]
+      }
+    ],
+    "composition": {
+      "it": "100% cotone, popeline lavata",
+      "en": "100% cotton, washed poplin"
+    },
+    "origin": {
+      "it": "Filato Italia, confezione Portogallo",
+      "en": "Yarn Italy, made in Portugal"
+    },
+    "care": {
+      "it": "30°C, stirare umida",
+      "en": "30°C, iron while damp"
+    },
+    "meaning": {
+      "it": "Artemisia vulgaris, l'assenzio selvatico. Si metteva nelle scarpe di chi camminava molto, e in latino il nome viene da Artemide. Non guarisce niente: serviva a chi doveva arrivare lontano. L'incisione è una tavola botanica ottocentesca, ridisegnata a mano.",
+      "en": "Artemisia vulgaris, common mugwort. It was put in the shoes of people who walked a long way, and the Latin name comes from Artemis. It cures nothing: it was for people who had to get somewhere far. The engraving is a nineteenth century botanical plate, redrawn by hand."
+    },
+    "image": "/images/collections/erbario.jpg"
+  },
+  {
+    "id": "p12",
+    "slug": "erbario-verbena",
+    "collection": "erbario",
+    "category": "accessori",
+    "name": {
+      "it": "Sciarpa Verbena",
+      "en": "Verbena scarf"
+    },
+    "priceCents": 7800,
+    "releasedOn": "2026-08-12",
+    "variants": [
+      {
+        "id": "salvia",
+        "colour": {
+          "it": "Salvia",
+          "en": "Sage"
+        },
+        "hex": "#7E9E8E",
+        "sizes": [
+          {
+            "size": "Taglia unica",
+            "availability": {
+              "state": "in-stock"
+            }
+          }
+        ]
+      },
+      {
+        "id": "notte",
+        "colour": {
+          "it": "Blu notte",
+          "en": "Night blue"
+        },
+        "hex": "#131A2E",
+        "sizes": [
+          {
+            "size": "Taglia unica",
+            "availability": {
+              "state": "low-stock",
+              "left": 4
+            }
+          }
+        ]
+      }
+    ],
+    "composition": {
+      "it": "100% lana merino",
+      "en": "100% merino wool"
+    },
+    "origin": {
+      "it": "Italia",
+      "en": "Italy"
+    },
+    "care": {
+      "it": "Lavaggio a mano in acqua fredda",
+      "en": "Hand wash in cold water"
+    },
+    "meaning": {
+      "it": "La verbena si raccoglieva prima dell'alba, senza usare il ferro. Non per magia: il ferro ossida gli oli della pianta e ne rovina il profumo, e chi la raccoglieva lo sapeva per esperienza. La sciarpa porta lo stelo inciso lungo un lato.",
+      "en": "Verbena was gathered before dawn, without using iron. Not for magic: iron oxidises the plant oils and ruins the scent, and the people gathering it knew that from experience. The scarf carries the engraved stem along one edge."
+    },
+    "image": "/images/collections/erbario.jpg"
+  },
+  {
+    "id": "p13",
+    "slug": "erbario-ruta",
+    "collection": "erbario",
+    "category": "camicie",
+    "name": {
+      "it": "Ruta",
+      "en": "Rue"
+    },
+    "priceCents": 15800,
+    "gsm": 200,
+    "releasedOn": "2026-07-14",
+    "variants": [
+      {
+        "id": "osso",
+        "colour": {
+          "it": "Bianco osso",
+          "en": "Bone white"
+        },
+        "hex": "#F2F0EA",
+        "sizes": [
+          {
+            "size": "XS",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "S",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "M",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "L",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "XL",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "XXL",
+            "availability": {
+              "state": "out-of-stock"
+            }
+          }
+        ]
+      }
+    ],
+    "composition": {
+      "it": "55% lino, 45% cotone",
+      "en": "55% linen, 45% cotton"
+    },
+    "origin": {
+      "it": "Filato Italia, confezione Portogallo",
+      "en": "Yarn Italy, made in Portugal"
+    },
+    "care": {
+      "it": "30°C, stirare umida",
+      "en": "30°C, iron while damp"
+    },
+    "meaning": {
+      "it": "La ruta si piantava sul davanzale e non si regalava mai: si lasciava rubare. Chi la voleva doveva prendersela, altrimenti, si diceva, non attecchiva. È una regola sociale travestita da superstizione, e funzionava.",
+      "en": "Rue was planted on the windowsill and never given away: it was left to be stolen. Whoever wanted it had to take it, or, so they said, it would not root. It is a social rule dressed as superstition, and it worked."
+    },
+    "image": "/images/collections/erbario.jpg"
+  },
+  {
+    "id": "p14",
+    "slug": "erbario-iperico",
+    "collection": "erbario",
+    "category": "maglieria",
+    "name": {
+      "it": "Iperico",
+      "en": "St John's wort"
+    },
+    "priceCents": 17800,
+    "releasedOn": "2026-06-15",
+    "variants": [
+      {
+        "id": "grigio",
+        "colour": {
+          "it": "Grigio pietra",
+          "en": "Stone grey"
+        },
+        "hex": "#A9B4CC",
+        "sizes": [
+          {
+            "size": "XS",
+            "availability": {
+              "state": "out-of-stock"
+            }
+          },
+          {
+            "size": "S",
+            "availability": {
+              "state": "low-stock",
+              "left": 2
+            }
+          },
+          {
+            "size": "M",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "L",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "XL",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "XXL",
+            "availability": {
+              "state": "in-stock"
+            }
+          }
+        ]
+      }
+    ],
+    "composition": {
+      "it": "100% lana merino",
+      "en": "100% merino wool"
+    },
+    "origin": {
+      "it": "Italia",
+      "en": "Italy"
+    },
+    "care": {
+      "it": "Lavaggio a mano, asciugatura in piano",
+      "en": "Hand wash, dry flat"
+    },
+    "meaning": {
+      "it": "Si raccoglie a giugno e le foglie, controluce, sembrano bucate: sono ghiandole piene di olio. Chi lo raccoglieva chiamava quei buchi finestre. Il punto di maglia sul davanti riprende quel motivo, e controluce si comporta allo stesso modo.",
+      "en": "It is gathered in June and the leaves, held to the light, look pierced: they are glands full of oil. The people who gathered it called those holes windows. The knit stitch on the front repeats that pattern, and behaves the same way against the light."
+    },
+    "image": "/images/collections/erbario.jpg"
+  },
+  {
+    "id": "p15",
+    "slug": "erbario-alloro",
+    "collection": "erbario",
+    "category": "camicie",
+    "name": {
+      "it": "Alloro",
+      "en": "Bay laurel"
+    },
+    "priceCents": 16800,
+    "gsm": 200,
+    "releasedOn": "2026-04-17",
+    "variants": [
+      {
+        "id": "salvia",
+        "colour": {
+          "it": "Salvia",
+          "en": "Sage"
+        },
+        "hex": "#7E9E8E",
+        "sizes": [
+          {
+            "size": "XS",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "S",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "M",
+            "availability": {
+              "state": "low-stock",
+              "left": 3
+            }
+          },
+          {
+            "size": "L",
+            "availability": {
+              "state": "low-stock",
+              "left": 2
+            }
+          },
+          {
+            "size": "XL",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "XXL",
+            "availability": {
+              "state": "in-stock"
+            }
+          }
+        ]
+      }
+    ],
+    "composition": {
+      "it": "55% lino, 45% cotone",
+      "en": "55% linen, 45% cotton"
+    },
+    "origin": {
+      "it": "Filato Italia, confezione Portogallo",
+      "en": "Yarn Italy, made in Portugal"
+    },
+    "care": {
+      "it": "30°C, stirare umida",
+      "en": "30°C, iron while damp"
+    },
+    "meaning": {
+      "it": "La corona d'alloro non era un premio: era un segnale che chi la portava aveva parlato in pubblico e poteva essere ascoltato. Serviva a chi stava intorno, non a chi la indossava. L'incisione è una sola foglia, sulla tasca.",
+      "en": "The laurel crown was not a prize: it was a signal that the wearer had spoken in public and could be listened to. It served the people around, not the person wearing it. The engraving is a single leaf, on the pocket."
+    },
+    "image": "/images/collections/erbario.jpg"
+  },
+  {
+    "id": "p16",
+    "slug": "cielo-dodici-case",
+    "collection": "carta-del-cielo",
+    "category": "accessori",
+    "name": {
+      "it": "Tote Dodici case",
+      "en": "Twelve houses tote"
+    },
+    "priceCents": 4600,
+    "gsm": 340,
+    "releasedOn": "2026-09-11",
+    "bestseller": true,
+    "variants": [
+      {
+        "id": "naturale",
+        "colour": {
+          "it": "Tela naturale",
+          "en": "Natural canvas"
+        },
+        "hex": "#E8E5DC",
+        "sizes": [
+          {
+            "size": "Taglia unica",
+            "availability": {
+              "state": "in-stock"
+            }
+          }
+        ]
+      }
+    ],
+    "composition": {
+      "it": "100% cotone, tela pesante",
+      "en": "100% cotton, heavy canvas"
+    },
+    "origin": {
+      "it": "India",
+      "en": "India"
+    },
+    "care": {
+      "it": "30°C, stiratura a rovescio sulla stampa",
+      "en": "30°C, iron the print from the back"
+    },
+    "meaning": {
+      "it": "La ruota divisa in dodici settori è una convenzione di disegno, non un oggetto celeste: serve a mettere su un foglio piatto qualcosa che sta su una sfera. È lo stesso problema delle carte geografiche, risolto nello stesso modo.",
+      "en": "The wheel divided into twelve sectors is a drawing convention, not a celestial object: it exists to put something spherical onto a flat sheet. It is the same problem as a map, solved the same way."
+    },
+    "image": "/images/collections/carta-del-cielo.jpg"
+  },
+  {
+    "id": "p17",
+    "slug": "cielo-eclittica",
+    "collection": "carta-del-cielo",
+    "category": "t-shirt",
+    "name": {
+      "it": "Eclittica",
+      "en": "Ecliptic"
+    },
+    "priceCents": 6800,
+    "gsm": 240,
+    "releasedOn": "2026-08-12",
+    "variants": [
+      {
+        "id": "notte",
+        "colour": {
+          "it": "Blu notte",
+          "en": "Night blue"
+        },
+        "hex": "#131A2E",
+        "sizes": [
+          {
+            "size": "XS",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "S",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "M",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "L",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "XL",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "XXL",
+            "availability": {
+              "state": "low-stock",
+              "left": 2
+            }
+          }
+        ]
+      },
+      {
+        "id": "osso",
+        "colour": {
+          "it": "Bianco osso",
+          "en": "Bone white"
+        },
+        "hex": "#F2F0EA",
+        "sizes": [
+          {
+            "size": "XS",
+            "availability": {
+              "state": "out-of-stock"
+            }
+          },
+          {
+            "size": "S",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "M",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "L",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "XL",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "XXL",
+            "availability": {
+              "state": "in-stock"
+            }
+          }
+        ]
+      }
+    ],
+    "composition": {
+      "it": "100% cotone organico",
+      "en": "100% organic cotton"
+    },
+    "origin": {
+      "it": "Filato Portogallo, confezione Portogallo",
+      "en": "Yarn Portugal, made in Portugal"
+    },
+    "care": {
+      "it": "A rovescio, 30°C, niente asciugatrice",
+      "en": "Inside out, 30°C, no tumble dryer"
+    },
+    "meaning": {
+      "it": "L'eclittica è la riga che il sole sembra percorrere in un anno, vista da qui. Sembra, perché a muoversi siamo noi. Tutte le costellazioni dello zodiaco stanno lungo quella riga, e il motivo è solo geometrico.",
+      "en": "The ecliptic is the line the sun appears to travel in a year, seen from here. Appears, because we are the ones moving. Every zodiac constellation sits along that line, and the reason is purely geometric."
+    },
+    "image": "/images/collections/carta-del-cielo.jpg"
+  },
+  {
+    "id": "p18",
+    "slug": "cielo-felpa-nodo",
+    "collection": "carta-del-cielo",
+    "category": "felpe",
+    "name": {
+      "it": "Felpa Nodo",
+      "en": "Node sweatshirt"
+    },
+    "priceCents": 11800,
+    "gsm": 400,
+    "releasedOn": "2026-07-14",
+    "variants": [
+      {
+        "id": "grigio",
+        "colour": {
+          "it": "Grigio pietra",
+          "en": "Stone grey"
+        },
+        "hex": "#A9B4CC",
+        "sizes": [
+          {
+            "size": "XS",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "S",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "M",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "L",
+            "availability": {
+              "state": "low-stock",
+              "left": 3
+            }
+          },
+          {
+            "size": "XL",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "XXL",
+            "availability": {
+              "state": "in-stock"
+            }
+          }
+        ]
+      }
+    ],
+    "composition": {
+      "it": "80% cotone organico, 20% poliestere riciclato",
+      "en": "80% organic cotton, 20% recycled polyester"
+    },
+    "origin": {
+      "it": "Portogallo",
+      "en": "Portugal"
+    },
+    "care": {
+      "it": "30°C, asciugatura in piano",
+      "en": "30°C, dry flat"
+    },
+    "meaning": {
+      "it": "I nodi sono i due punti dove l'orbita della luna incrocia quella apparente del sole. Le eclissi possono succedere solo lì, ed è per questo che sono rare: due orbite inclinate si incontrano in due punti soltanto.",
+      "en": "The nodes are the two points where the moon's orbit crosses the sun's apparent one. Eclipses can only happen there, which is why they are rare: two tilted orbits meet at two points and nowhere else."
+    },
+    "image": "/images/collections/carta-del-cielo.jpg"
+  },
+  {
+    "id": "p19",
+    "slug": "cielo-meridiano",
+    "collection": "carta-del-cielo",
+    "category": "t-shirt",
+    "name": {
+      "it": "Meridiano",
+      "en": "Meridian"
+    },
+    "priceCents": 5800,
+    "gsm": 240,
+    "releasedOn": "2026-05-16",
+    "variants": [
+      {
+        "id": "osso",
+        "colour": {
+          "it": "Bianco osso",
+          "en": "Bone white"
+        },
+        "hex": "#F2F0EA",
+        "sizes": [
+          {
+            "size": "XS",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "S",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "M",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "L",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "XL",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "XXL",
+            "availability": {
+              "state": "in-stock"
+            }
+          }
+        ]
+      }
+    ],
+    "composition": {
+      "it": "100% cotone organico",
+      "en": "100% organic cotton"
+    },
+    "origin": {
+      "it": "Filato Portogallo, confezione Portogallo",
+      "en": "Yarn Portugal, made in Portugal"
+    },
+    "care": {
+      "it": "A rovescio, 30°C, niente asciugatrice",
+      "en": "Inside out, 30°C, no tumble dryer"
+    },
+    "meaning": {
+      "it": "Il meridiano è la riga immaginaria che passa sopra la tua testa da nord a sud. Ogni astro la attraversa una volta al giorno, e quel momento è il suo mezzogiorno. Ne hai uno tuo, e cambia se ti sposti.",
+      "en": "The meridian is the imaginary line running over your head from north to south. Every star crosses it once a day, and that moment is its noon. You have one of your own, and it changes when you move."
+    },
+    "image": "/images/collections/carta-del-cielo.jpg"
+  },
+  {
+    "id": "p20",
+    "slug": "cielo-cappuccio-zenit",
+    "collection": "carta-del-cielo",
+    "category": "felpe",
+    "name": {
+      "it": "Cappuccio Zenit",
+      "en": "Zenith hoodie"
+    },
+    "priceCents": 14800,
+    "gsm": 420,
+    "releasedOn": "2026-03-19",
+    "variants": [
+      {
+        "id": "notte",
+        "colour": {
+          "it": "Blu notte",
+          "en": "Night blue"
+        },
+        "hex": "#131A2E",
+        "sizes": [
+          {
+            "size": "XS",
+            "availability": {
+              "state": "out-of-stock"
+            }
+          },
+          {
+            "size": "S",
+            "availability": {
+              "state": "out-of-stock"
+            }
+          },
+          {
+            "size": "M",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "L",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "XL",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "XXL",
+            "availability": {
+              "state": "in-stock"
+            }
+          }
+        ]
+      }
+    ],
+    "composition": {
+      "it": "80% cotone organico, 20% poliestere riciclato",
+      "en": "80% organic cotton, 20% recycled polyester"
+    },
+    "origin": {
+      "it": "Portogallo",
+      "en": "Portugal"
+    },
+    "care": {
+      "it": "30°C, asciugatura in piano",
+      "en": "30°C, dry flat"
+    },
+    "meaning": {
+      "it": "Lo zenit è il punto esattamente sopra di te. Non è un posto nel cielo: è un posto che dipende da dove stai. Se ti sposti di un metro, il tuo zenit si sposta di un metro. Il segno è sul cappuccio, cioè sopra la testa.",
+      "en": "The zenith is the point exactly above you. It is not a place in the sky: it is a place that depends on where you stand. Move a metre and your zenith moves a metre. The mark is on the hood, which is to say above the head."
+    },
+    "image": "/images/collections/carta-del-cielo.jpg"
+  },
+  {
+    "id": "p21",
+    "slug": "sale-chiave",
+    "collection": "sale-e-ferro",
+    "category": "denim",
+    "name": {
+      "it": "Giacca Chiave",
+      "en": "Key jacket"
+    },
+    "priceCents": 13800,
+    "gsm": 400,
+    "releasedOn": "2026-10-10",
+    "bestseller": true,
+    "variants": [
+      {
+        "id": "indaco",
+        "colour": {
+          "it": "Indaco grezzo",
+          "en": "Raw indigo"
+        },
+        "hex": "#1E2740",
+        "sizes": [
+          {
+            "size": "XS",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "S",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "M",
+            "availability": {
+              "state": "low-stock",
+              "left": 2
+            }
+          },
+          {
+            "size": "L",
+            "availability": {
+              "state": "low-stock",
+              "left": 2
+            }
+          },
+          {
+            "size": "XL",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "XXL",
+            "availability": {
+              "state": "in-stock"
+            }
+          }
+        ]
+      }
+    ],
+    "composition": {
+      "it": "100% cotone, denim grezzo 13,5 oz",
+      "en": "100% cotton, 13.5 oz raw denim"
+    },
+    "origin": {
+      "it": "Tessuto Giappone, confezione Portogallo",
+      "en": "Fabric Japan, made in Portugal"
+    },
+    "care": {
+      "it": "Lavare il meno possibile, a rovescio, acqua fredda",
+      "en": "Wash as little as possible, inside out, cold"
+    },
+    "meaning": {
+      "it": "La chiave appesa sopra la porta non serviva ad aprire niente: era già rotta o di una serratura che non esisteva più. Serviva a dire che la casa aveva una porta, e che qualcuno la chiudeva. Un segnale, non uno strumento.",
+      "en": "The key hung above the door opened nothing: it was already broken, or from a lock that no longer existed. It was there to say the house had a door, and that someone closed it. A signal, not a tool."
+    },
+    "image": "/images/collections/sale-e-ferro.jpg"
+  },
+  {
+    "id": "p22",
+    "slug": "sale-jeans-linea",
+    "collection": "sale-e-ferro",
+    "category": "denim",
+    "name": {
+      "it": "Jeans Linea",
+      "en": "Line jeans"
+    },
+    "priceCents": 16800,
+    "releasedOn": "2026-09-11",
+    "variants": [
+      {
+        "id": "indaco",
+        "colour": {
+          "it": "Indaco grezzo",
+          "en": "Raw indigo"
+        },
+        "hex": "#1E2740",
+        "sizes": [
+          {
+            "size": "28",
+            "availability": {
+              "state": "out-of-stock"
+            }
+          },
+          {
+            "size": "30",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "32",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "34",
+            "availability": {
+              "state": "in-stock"
+            }
+          },
+          {
+            "size": "36",
+            "availability": {
+              "state": "in-stock"
+            }
+          }
+        ]
+      }
+    ],
+    "composition": {
+      "it": "100% cotone, denim grezzo 14 oz",
+      "en": "100% cotton, 14 oz raw denim"
+    },
+    "origin": {
+      "it": "Tessuto Giappone, confezione Portogallo",
+      "en": "Fabric Japan, made in Portugal"
+    },
+    "care": {
+      "it": "Lavare il meno possibile, a rovescio, acqua fredda",
+      "en": "Wash as little as possible, inside out, cold"
+    },
+    "meaning": {
+      "it": "La linea di sale sulla soglia si versava per segnare un confine che si vedeva. Non fermava niente: obbligava chi entrava a guardare in basso e ad accorgersi di stare passando da qualche parte. La cucitura interna la riprende.",
+      "en": "The line of salt on the threshold was poured to mark a border you could see. It stopped nothing: it forced whoever entered to look down and notice they were crossing into somewhere. The inside seam repeats it."
+    },
+    "image": "/images/collections/sale-e-ferro.jpg"
+  },
+  {
+    "id": "p23",
+    "slug": "sale-berretto",
+    "collection": "sale-e-ferro",
+    "category": "accessori",
+    "name": {
+      "it": "Berretto Ferro",
+      "en": "Iron cap"
+    },
+    "priceCents": 4800,
+    "releasedOn": "2026-08-12",
+    "variants": [
+      {
+        "id": "indaco",
+        "colour": {
+          "it": "Indaco grezzo",
+          "en": "Raw indigo"
+        },
+        "hex": "#1E2740",
+        "sizes": [
+          {
+            "size": "Taglia unica",
+            "availability": {
+              "state": "in-stock"
+            }
+          }
+        ]
+      },
+      {
+        "id": "nero",
+        "colour": {
+          "it": "Nero lavato",
+          "en": "Washed black"
+        },
+        "hex": "#0B1020",
+        "sizes": [
+          {
+            "size": "Taglia unica",
+            "availability": {
+              "state": "out-of-stock"
+            }
+          }
+        ]
+      }
+    ],
+    "composition": {
+      "it": "100% cotone, tela pesante",
+      "en": "100% cotton, heavy canvas"
+    },
+    "origin": {
+      "it": "Portogallo",
+      "en": "Portugal"
+    },
+    "care": {
+      "it": "Lavaggio a mano",
+      "en": "Hand wash"
+    },
+    "meaning": {
+      "it": "Il ferro di cavallo si inchiodava con le punte in alto, non in basso. Non per trattenere la fortuna: per non farlo cadere addosso a chi passava sotto. Molte usanze protettive sono, guardate da vicino, precauzioni pratiche.",
+      "en": "The horseshoe was nailed with the points upward, not down. Not to hold the luck in: to stop it falling on whoever walked underneath. Many protective customs are, looked at closely, practical precautions."
+    },
+    "image": "/images/collections/sale-e-ferro.jpg"
+  },
+  {
+    "id": "p24",
+    "slug": "sale-archivio-soglia",
+    "collection": "sale-e-ferro",
+    "category": "denim",
+    "name": {
+      "it": "Archivio · Soglia",
+      "en": "Archive · Threshold"
+    },
+    "priceCents": 24800,
+    "releasedOn": "2026-02-17",
+    "variants": [
+      {
+        "id": "indaco",
+        "colour": {
+          "it": "Indaco grezzo",
+          "en": "Raw indigo"
+        },
+        "hex": "#1E2740",
+        "sizes": [
+          {
+            "size": "S",
+            "availability": {
+              "state": "out-of-stock"
+            }
+          },
+          {
+            "size": "M",
+            "availability": {
+              "state": "low-stock",
+              "left": 1
+            }
+          },
+          {
+            "size": "L",
+            "availability": {
+              "state": "out-of-stock"
+            }
+          }
+        ]
+      }
+    ],
+    "composition": {
+      "it": "100% cotone, denim grezzo 16 oz, cimosa",
+      "en": "100% cotton, 16 oz raw selvedge denim"
+    },
+    "origin": {
+      "it": "Tessuto Giappone, confezione Italia",
+      "en": "Fabric Japan, made in Italy"
+    },
+    "care": {
+      "it": "Lavare il meno possibile, a rovescio, acqua fredda",
+      "en": "Wash as little as possible, inside out, cold"
+    },
+    "meaning": {
+      "it": "Pezzo unico dell'uscita GHIACCIO, l'eclissi di febbraio. Cimosa da sedici once, cucita in Italia, con la linea di sale ricamata a mano sull'orlo interno. Quello che è uscito è uscito: quando finisce non torna, e non lo ristampiamo.",
+      "en": "One-off piece from the ICE release, the February eclipse. Sixteen ounce selvedge, sewn in Italy, with the salt line hand-embroidered on the inner hem. What is gone stays gone: when it ends it does not come back, and we do not reprint it."
+    },
+    "image": "/images/collections/sale-e-ferro.jpg"
+  }
+]

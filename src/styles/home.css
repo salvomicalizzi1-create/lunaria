@@ -1,0 +1,762 @@
+/* The cinematic homepage.
+   Ported from the standalone page, with every hand-typed value swapped for the
+   token it was always meant to be. Nothing here invents a colour or a step. */
+
+@layer components {
+  /* The bands and the static hero are positioned against the page gutter, and
+     they are not inside .wrap, so the gutter needs a name of its own. */
+  :root {
+    --pad: var(--layout-pad-mobile);
+    /* three shadows, not one: the near one carries the letter edge, the far one
+       darkens the mist behind it */
+    --tshadow:
+      0 1px 2px rgb(5 5 10 / 0.95),
+      0 3px 12px rgb(5 5 10 / 0.78),
+      0 10px 44px rgb(5 5 10 / 0.8);
+  }
+  @media (min-width: 768px)  { :root { --pad: var(--layout-pad-tablet); } }
+  @media (min-width: 1280px) { :root { --pad: var(--layout-pad-desktop); } }
+
+  .vh {
+    position: absolute !important;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .sec { padding-block: var(--spacing-9); }
+  @media (min-width: 1024px) { .sec { padding-block: var(--spacing-11); } }
+
+  .stack { display: flex; flex-direction: column; gap: var(--spacing-4); align-items: flex-start; }
+  .stack > .readout, .stack > .spec, .stack > table { width: 100%; margin-top: var(--spacing-3); }
+
+  .sechead { display: flex; flex-direction: column; gap: var(--spacing-3); margin-bottom: var(--spacing-7); }
+  .sechead h2 { font-size: var(--text-h2); }
+
+  /* ============================================ fixed environment
+     One place for the atmosphere, not a stack of decorated blocks. */
+  .env { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+  .env__glow {
+    position: absolute; inset: -20%;
+    background:
+      radial-gradient(ellipse 50% 40% at 50% 8%, rgb(143 165 216 / 0.16), transparent 62%),
+      radial-gradient(ellipse 60% 45% at 12% 82%, rgb(126 158 142 / 0.10), transparent 60%);
+    animation: env-drift 96s ease-in-out -30s infinite alternate;
+  }
+  @keyframes env-drift {
+    from { transform: translate3d(-2%, -1%, 0) scale(1); }
+    to   { transform: translate3d(2%, 2%, 0) scale(1.08); }
+  }
+  .env__stars { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .env__grain {
+    position: absolute; inset: 0; opacity: 0.5;
+    background-image: radial-gradient(rgb(201 206 220 / 0.055) 1px, transparent 1px);
+    background-size: 3px 3px;
+  }
+
+  /* ============================================ the terminator rail
+     The brand's one idea, running down the side of the page. */
+  .rail {
+    position: fixed;
+    left: max(14px, calc((100vw - var(--layout-max-width)) / 2 + 14px));
+    top: 0; bottom: 0; width: 1px; z-index: 3; pointer-events: none;
+    background: linear-gradient(to bottom, transparent, var(--rule) 8%, var(--rule) 92%, transparent);
+  }
+  .rail__run {
+    position: absolute; left: -1px; width: 3px; height: 22vh;
+    background: linear-gradient(to bottom, transparent, var(--accent), transparent);
+    filter: blur(0.4px); opacity: 0.85;
+    transform: translate3d(0, var(--railY, 0px), 0);
+  }
+  .rail__dot {
+    position: absolute; left: -3px; width: 7px; height: 7px; border-radius: 50%;
+    border: 1px solid var(--accent); background: var(--canvas);
+    transform: translate3d(0, calc(var(--railY, 0px) + 11vh), 0);
+  }
+  @media (max-width: 1023px) { .rail { display: none; } }
+
+  /* ============================================ ticker */
+  .ticker {
+    position: relative; z-index: 6;
+    border-bottom: 1px solid var(--rule);
+    background: color-mix(in srgb, var(--canvas) 88%, transparent);
+    backdrop-filter: blur(8px);
+    overflow: hidden;
+  }
+  .ticker__track { display: flex; width: max-content; animation: ticker-slide 46s linear infinite; }
+  .ticker:hover .ticker__track,
+  .ticker:focus-within .ticker__track { animation-play-state: paused; }
+  @keyframes ticker-slide {
+    from { transform: translate3d(0, 0, 0); }
+    to   { transform: translate3d(-50%, 0, 0); }
+  }
+  .ticker__set { display: flex; flex: none; }
+  .ticker__i {
+    display: flex; align-items: center; gap: var(--spacing-3);
+    padding: 9px var(--spacing-5); white-space: nowrap;
+    font-family: var(--font-mono); font-size: 11px;
+    letter-spacing: 0.12em; text-transform: uppercase; color: var(--fg-2);
+  }
+  .ticker__i::after {
+    content: ''; width: 3px; height: 3px; border-radius: 50%;
+    background: var(--accent); opacity: 0.7;
+  }
+
+  /**
+   * Movimento ridotto: il nastro smette di essere un nastro.
+   *
+   * Scorrendo, un tabellone più largo della finestra va benissimo — tutto passa
+   * davanti agli occhi. Ma chi chiede meno movimento ferma l'animazione, e
+   * allora quella larghezza in più non è più un passaggio: è un muro.
+   *
+   * Misurato su 390px: cinque voci su dodici restavano fuori dallo schermo per
+   * sempre, e fra quelle «Prossima luna nuova fra 8.4 giorni» — cioè proprio il
+   * dato dal vivo per cui il nastro esiste. Un'animazione spenta non deve
+   * togliere informazione a nessuno.
+   *
+   * Fermo, il nastro va a capo e mostra tutto. Il secondo gruppo di voci serve
+   * solo a far tornare il giro senza stacchi: senza animazione è una ripetizione
+   * e sparisce.
+   */
+  @media (prefers-reduced-motion: reduce) {
+    .ticker__track { width: auto; animation: none; flex-wrap: wrap; }
+    /* Il gruppo sparisce come scatola e le voci diventano figlie del nastro:
+       altrimenti resta un elemento solo, largo quanto il suo contenuto, e
+       andare a capo non lo riguarda. */
+    .ticker__set { display: contents; }
+    .ticker__set + .ticker__set { display: none; }
+    .ticker__i { padding-block: 6px; }
+  }
+
+  /* ============================================ header over the hero
+     Above the footage the header has no ground of its own, and what is behind it
+     can be bright mist, so it carries its own scrim until the page turns solid. */
+  .hdr--over:not(.is-solid) {
+    background: transparent;
+    backdrop-filter: none;
+    border-bottom-color: transparent;
+  }
+  .hdr--over:not(.is-solid)::before {
+    content: ''; position: absolute; inset: -1px 0 auto 0; height: 190%; pointer-events: none;
+    background: linear-gradient(to bottom, rgb(8 12 26 / 0.86), rgb(8 12 26 / 0.52) 46%, rgb(8 12 26 / 0));
+  }
+  .hdr--over:not(.is-solid) .hdr__in {
+    position: relative;
+    color: var(--color-moonlight);
+    text-shadow: 0 1px 3px rgb(5 5 10 / 0.9), 0 6px 22px rgb(5 5 10 / 0.6);
+  }
+  .hdr--over:not(.is-solid) .navmain a { color: rgb(242 240 234 / 0.86); }
+  .hdr--over:not(.is-solid) .navmain a:hover { color: #fff; }
+  .hdr--over:not(.is-solid) .tool {
+    color: rgb(242 240 234 / 0.82);
+    border-color: rgb(242 240 234 / 0.34);
+    text-shadow: none;
+  }
+  .hdr--over:not(.is-solid) .tool:hover { color: #fff; border-color: rgb(242 240 234 / 0.8); }
+
+  /* ============================================ hero, scroll scrubbed */
+  .hero { position: relative; height: 560vh; z-index: 2; }
+  .stage { position: sticky; top: 0; height: 100dvh; overflow: hidden; background: var(--color-ink); }
+  .stage__media { position: absolute; inset: 0; }
+  .poster {
+    position: absolute; inset: 0;
+    background-size: cover; background-position: center;
+    background-color: var(--color-ink);
+  }
+  .stage__video {
+    position: absolute; inset: 0; width: 100%; height: 100%;
+    object-fit: cover; opacity: 0;
+    transform: translateZ(0); will-change: transform;
+    transition: opacity 520ms var(--ease-out-quart);
+  }
+  .stage.is-ready .stage__video { opacity: 1; }
+  .stage.is-failed .stage__video { display: none; }
+  .scrim {
+    position: absolute; inset: 0; pointer-events: none;
+    background: radial-gradient(ellipse 120% 90% at 50% 45%, rgb(10 10 18 / 0) 35%, rgb(10 10 18 / 0.62) 100%);
+  }
+  .vign {
+    position: absolute; inset: 0; pointer-events: none;
+    background: linear-gradient(to bottom, rgb(11 16 32 / 0.55), transparent 22%, transparent 62%, rgb(11 16 32 / 0.66));
+  }
+
+  .bands { position: absolute; inset: 0; }
+  .band {
+    position: absolute; inset: 0; opacity: 0; pointer-events: none;
+    text-shadow: var(--tshadow); color: var(--color-moonlight);
+  }
+  .band .btn { text-shadow: none; }
+  /* Per-band scrim, tuned against each band's WORST frame and not its average:
+     an average-tuned scrim is a band that goes unreadable for half a second. */
+  .band::before {
+    content: ''; position: absolute; inset: -4%; pointer-events: none;
+    opacity: calc(0.25 + 0.75 * var(--k, 1));
+    background: radial-gradient(
+      ellipse var(--sw, 74%) var(--sh, 62%) at var(--sx, 50%) var(--sy, 50%),
+      rgb(5 5 10 / var(--sa, 0.7)) 0%,
+      rgb(5 5 10 / calc(var(--sa, 0.7) * 0.64)) 46%,
+      rgb(5 5 10 / 0) 78%);
+  }
+  .band__in {
+    position: absolute; width: min(560px, 78vw);
+    display: flex; flex-direction: column; gap: var(--spacing-4);
+  }
+  .band[data-pos='bl'] .band__in { left: var(--pad); bottom: 14vh; }
+  .band[data-pos='lc'] .band__in { left: var(--pad); top: 50%; transform: translateY(-50%); }
+  .band[data-pos='br'] .band__in { right: var(--pad); bottom: 14vh; text-align: right; align-items: flex-end; }
+  .band[data-pos='br'] .band__cta { justify-content: flex-end; }
+  @media (min-width: 1024px) {
+    .band[data-pos='bl'] .band__in { left: calc(var(--pad) + 56px); bottom: 16vh; }
+    .band[data-pos='lc'] .band__in { left: calc(var(--pad) + 56px); }
+    .band[data-pos='br'] .band__in { right: calc(var(--pad) + 24px); bottom: 16vh; }
+  }
+  /* Each block is sized to stay out of the action lane of its own frames: the
+     moon's light column in the first half, the cloth in the last quarter. */
+  .band[data-band='1'] .band__in { width: min(470px, 80vw); }
+  .band[data-band='1'] .h { font-size: clamp(2rem, 4.8vw, 4.25rem); }
+  .band[data-band='4'] .band__in { width: min(470px, 78vw); }
+  /* the settle is a timestamp, not a shout: it reads as an instrument readout */
+  .band[data-band='4'] h2 { font-size: var(--text-h1); }
+  .band .h, .band h2 { font-size: var(--text-display-xl); line-height: var(--leading-display); }
+  .band[data-band='2'] h2, .band[data-band='3'] h2 { font-size: var(--text-h1); }
+  .band p {
+    font-size: clamp(0.95rem, 1.5vw, 1.15rem);
+    color: var(--color-moonlight); opacity: 0.92; max-width: 46ch;
+  }
+  .band__cta { display: flex; flex-wrap: wrap; gap: var(--spacing-3); margin-top: var(--spacing-2); }
+
+  /* split text engine */
+  .w { display: inline-block; white-space: pre; }
+  .c { display: inline-block; will-change: transform, opacity; }
+  .e-scatter .c {
+    --kc: clamp(0, (var(--k, 0) - var(--th, 0)) * 2.6, 1);
+    opacity: var(--kc);
+    transform:
+      translate(calc((1 - var(--kc)) * var(--jx, 0px)), calc((1 - var(--kc)) * var(--jy, 0px)))
+      rotate(calc((1 - var(--kc)) * var(--jr, 0deg)));
+  }
+  .e-drift .w {
+    --kc: clamp(0, (var(--k, 0) - var(--th, 0)) * 2.8, 1);
+    opacity: var(--kc);
+    transform: translateY(calc((1 - var(--kc)) * -26px));
+  }
+  .e-punch .w {
+    --kc: clamp(0, (var(--k, 0) - var(--th, 0)) * 3, 1);
+    --ks: clamp(0, (var(--k, 0) - var(--th, 0) - var(--sd, 0.1)) * var(--ss, 3.2), 1);
+    opacity: var(--kc);
+    transform: scale(calc(0.62 + (0.38 + var(--ov, 0.12)) * var(--kc) - var(--ov, 0.12) * var(--ks)));
+  }
+  .e-punch .w.em { --ov: 0.24; --sd: 0.16; --ss: 2.6; }
+  .e-settle .w {
+    --kc: clamp(0, (var(--k, 0) - var(--th, 0)) * 2.6, 1);
+    opacity: var(--kc);
+    transform: translateY(calc((1 - var(--kc)) * 18px));
+  }
+  .e-settle .sub { opacity: var(--ks2, 0); transform: translateY(calc((1 - var(--ks2, 0)) * 12px)); }
+  .e-settle .band__cta { opacity: var(--kb, 0); transform: translateY(calc((1 - var(--kb, 0)) * 10px)); }
+
+  /* loading ring and scroll cue */
+  .ring {
+    position: absolute; left: 50%; bottom: calc(28px + env(safe-area-inset-bottom));
+    transform: translateX(-50%); width: 34px; height: 34px;
+    color: var(--color-aurora); opacity: 0.8;
+    transition: opacity var(--dur-base) var(--ease-out-quart);
+  }
+  .ring circle { transform: rotate(-90deg); transform-origin: 50% 50%; transition: stroke-dashoffset 140ms linear; }
+  .stage.is-ready .ring { opacity: 0; }
+  .cue {
+    position: absolute; left: 50%; bottom: calc(26px + env(safe-area-inset-bottom));
+    transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; gap: 7px;
+    color: var(--color-moonlight); opacity: 0.62;
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
+  }
+  .cue span {
+    display: block; width: 1px; height: 26px;
+    background: linear-gradient(to bottom, currentColor, transparent);
+    animation: cued 3.2s var(--ease-in-out-quint) -1s infinite;
+  }
+  @keyframes cued {
+    0%, 100% { transform: scaleY(0.4); opacity: 0.35; }
+    50% { transform: scaleY(1); opacity: 0.9; }
+  }
+
+  /**
+   * static hero
+   *
+   * Il fondo di questo blocco non coincide col fondo dello schermo, e per un po'
+   * non me ne sono accorto: `.hero` è alto `100dvh`, ma comincia sotto il nastro
+   * e l'intestazione — 94px — quindi finisce 94px OLTRE il bordo visibile, e si
+   * porta appresso tutto quello che è ancorato in basso.
+   *
+   * Misurato: su 390x844 il secondo pulsante finiva a 7px dal bordo invece dei
+   * 12vh voluti; su 360x640 finiva a 657, cioè diciassette pixel sotto il bordo,
+   * tagliato. Il respiro di 12vh non c'era mai stato su un telefono: era stato
+   * mangiato dall'intestazione.
+   *
+   * Si recupera aggiungendo quell'altezza al margine di sotto. È un numero
+   * scritto a mano, e i numeri scritti a mano scivolano: perciò
+   * review/eroe-check.js misura ogni volta che i pulsanti stiano davvero dentro
+   * lo schermo, a tre misure di telefono.
+   */
+  .statichero {
+    /* Lo misura Hero.tsx e lo scrive qui: e la distanza fra la cima della
+       pagina e la cima dell'eroe, cioe quanto di lui finisce sotto il bordo.
+       Il 94px di ripiego serve solo al primo disegno, prima che il copione
+       parta; e col movimento ridotto sarebbe sbagliato, perche il nastro va a
+       capo e diventa molto piu alto. */
+    --sopra: var(--sopra-eroe, 94px);
+    position: absolute; inset: 0; display: none; padding: 0 var(--pad);
+    flex-direction: column; justify-content: flex-end;
+    padding-bottom: calc(12vh + var(--sopra) + env(safe-area-inset-bottom));
+    gap: var(--spacing-4); color: var(--color-moonlight); text-shadow: var(--tshadow);
+  }
+  /* la misura di lettura di 36ch vale per la prosa qui sotto, non per una riga
+     di etichetta: su questa spezzava «VIII / XIII» a ogni larghezza */
+  /* la misura di lettura di 36ch vale per la prosa qui sotto, non per una riga
+     di etichetta: su questa spezzava «VIII / XIII» a ogni larghezza.
+     Il selettore nomina anche il tag perche `.statichero p` e piu specifico
+     della sola classe, e vinceva. */
+  .statichero p.statichero__eyebrow { opacity: 0.75; letter-spacing: 0.2em; max-width: none; }
+  .statichero .h { font-size: var(--text-display-xl); line-height: var(--leading-display); }
+  .statichero p { max-width: 36ch; opacity: 0.92; }
+  .statichero .btn { text-shadow: none; }
+
+  /* THE FIVE STATIC HERO GATES. These strings must match the JS list exactly:
+     a phone that gets the tall scroll section but no bands is a blank screen. */
+  @media (max-width: 720px),
+         (orientation: portrait) and (max-width: 1024px),
+         (orientation: portrait) and (pointer: coarse),
+         (orientation: landscape) and (pointer: coarse) and (max-height: 560px),
+         (prefers-reduced-motion: reduce) {
+    .hero { height: 100dvh; }
+    .bands, .ring, .cue { display: none !important; }
+    .statichero { display: flex; }
+  }
+  @media (max-height: 560px) { .cue, .ring { display: none; } }
+
+  /* ============================================ S1 the instrument */
+  .instr { display: grid; gap: var(--spacing-7); }
+  /* Un figlio di griglia non si stringe sotto il proprio contenuto minimo, se
+     non glielo si dice: senza questo, un solo elemento testardo allarga la
+     colonna e ci porta dentro i fratelli. È la cintura, oltre alle bretelle. */
+  .instr > * { min-width: 0; }
+  @media (min-width: 1024px) {
+    .instr { grid-template-columns: 5fr 7fr; gap: var(--spacing-9); align-items: center; }
+  }
+  .dial { position: relative; aspect-ratio: 1; width: min(340px, 72vw); margin-inline: auto; }
+  @media (min-width: 1024px) { .dial { width: 100%; max-width: 400px; margin: 0; } }
+  .dial svg { width: 100%; height: 100%; overflow: visible; }
+  .dial__glow {
+    position: absolute; inset: 8%; border-radius: 50%; pointer-events: none;
+    box-shadow: 0 0 90px 10px rgb(143 165 216 / 0.3);
+    opacity: 0.55; animation: breathe 9s var(--ease-in-out-quint) -3s infinite;
+  }
+  @keyframes breathe { 0%, 100% { opacity: 0.34; } 50% { opacity: 0.72; } }
+  .readout { display: grid; grid-template-columns: 1fr; border-top: 1px solid var(--rule); }
+  .readout div {
+    display: flex; justify-content: space-between; align-items: baseline; gap: var(--spacing-4);
+    padding: 14px 0; border-bottom: 1px solid var(--rule);
+  }
+  .readout .k {
+    font-family: var(--font-body); font-size: var(--text-eyebrow);
+    text-transform: uppercase; letter-spacing: var(--tracking-eyebrow); color: var(--fg-2);
+  }
+  .readout .v {
+    font-family: var(--font-mono); font-size: clamp(0.9rem, 1.4vw, 1.05rem);
+    color: var(--fg); text-align: right; font-variant-numeric: tabular-nums;
+  }
+  .readout .v.hi { color: var(--gold); }
+
+  /* ============================================ S2 the five collections
+     A catalogue, not a grid: image and text swap sides down the page so no two
+     neighbouring rows share a skeleton. */
+  .coll { display: flex; flex-direction: column; gap: var(--spacing-9); }
+  @media (min-width: 1024px) { .coll { gap: var(--spacing-10); } }
+  .coll__row { display: grid; gap: var(--spacing-5); align-items: center; }
+  @media (min-width: 768px) {
+    .coll__row { grid-template-columns: 5fr 6fr; gap: var(--spacing-7); }
+    .coll__row:nth-child(even) .coll__fig { order: 2; }
+    .coll__row:nth-child(even) .coll__body { order: 1; }
+  }
+  @media (min-width: 1024px) { .coll__row { gap: var(--spacing-9); } }
+  .coll__fig {
+    margin: 0; aspect-ratio: 4 / 5; overflow: hidden;
+    background: var(--panel); position: relative;
+  }
+  .coll__fig img { width: 100%; height: 100%; object-fit: cover; }
+  .coll__body { display: flex; flex-direction: column; gap: var(--spacing-4); align-items: flex-start; }
+  .coll__head { display: flex; align-items: center; gap: var(--spacing-4); }
+  .sigil { width: 60px; height: 60px; color: var(--acc, var(--accent)); flex: none; }
+  @media (min-width: 768px) { .sigil { width: 74px; height: 74px; } }
+  .sigil--strip { height: auto; aspect-ratio: 100 / 16; width: 96px; }
+  @media (min-width: 768px) { .sigil--strip { width: 120px; } }
+  .sigil path, .sigil circle, .sigil line, .sigil ellipse { vector-effect: non-scaling-stroke; }
+  .coll__t { display: flex; flex-direction: column; gap: var(--spacing-1); }
+  .coll__t h3 { font-size: var(--text-h2); letter-spacing: 0.01em; }
+  .coll__t .en {
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--fg-2);
+  }
+  .coll__m {
+    font-family: var(--font-display); font-size: clamp(1.15rem, 2.2vw, 1.65rem);
+    color: var(--fg); max-width: 30ch;
+  }
+  .coll__meta {
+    display: flex; align-items: baseline; gap: var(--spacing-4); flex-wrap: wrap; width: 100%;
+    border-top: 1px solid var(--rule); padding-top: var(--spacing-4);
+  }
+  .coll__price {
+    font-family: var(--font-mono); font-size: var(--text-small);
+    color: var(--gold); font-variant-numeric: tabular-nums; margin-inline-start: auto;
+  }
+  /* the whole row is a link into the collection, and the image moves with it */
+  .coll__link { text-decoration: none; color: inherit; display: contents; }
+  .coll__row:hover .coll__fig img { transform: scale(1.03); }
+  .coll__fig img { transition: transform var(--dur-expressive) var(--ease-out-quart); }
+
+  /* ============================================ S3 the meaning */
+  .meaning { display: grid; gap: var(--spacing-7); }
+  @media (min-width: 1024px) {
+    .meaning { grid-template-columns: 7fr 5fr; gap: var(--spacing-9); align-items: center; }
+  }
+  .figure { position: relative; aspect-ratio: 4 / 5; background: var(--panel); overflow: hidden; margin: 0; }
+  .figure img { width: 100%; height: 100%; object-fit: cover; }
+  .wipe img {
+    clip-path: inset(0 0 100% 0); transform: scale(1.04);
+    transition: clip-path var(--dur-expressive) var(--ease-out-quart), transform 1100ms var(--ease-out-quart);
+  }
+  .wipe.in img { clip-path: inset(0 0 0 0); transform: scale(1); }
+  .label { display: flex; flex-direction: column; gap: var(--spacing-4); align-items: flex-start; }
+  .label__price { font-family: var(--font-mono); font-size: 1.05rem; color: var(--gold); font-variant-numeric: tabular-nums; }
+  .label__body { font-family: var(--font-display); font-size: 1.25rem; line-height: 1.5; max-width: 42ch; }
+  .label__spec {
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--fg-2);
+    border-top: 1px solid var(--rule); padding-top: var(--spacing-4); width: 100%;
+  }
+
+  /* ============================================ S4 the material, light island */
+  .island {
+    padding-block: var(--spacing-9);
+    background: var(--canvas); color: var(--fg);
+  }
+  @media (min-width: 1024px) { .island { padding-block: var(--spacing-10); } }
+  .mat { display: grid; gap: var(--spacing-7); }
+  @media (min-width: 1024px) { .mat { grid-template-columns: 1fr 1fr; gap: var(--spacing-9); align-items: start; } }
+  .spec {
+    width: 100%; border-collapse: collapse;
+    font-family: var(--font-mono); font-size: var(--text-small); font-variant-numeric: tabular-nums;
+  }
+  .spec th, .spec td { text-align: left; padding: var(--spacing-3) 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  .spec th {
+    font-family: var(--font-body); font-weight: 400; font-size: var(--text-eyebrow);
+    text-transform: uppercase; letter-spacing: var(--tracking-eyebrow); color: var(--fg-2); width: 46%;
+  }
+  .mat .figure { aspect-ratio: 16 / 9; }
+  @media (min-width: 1024px) { .mat .figure { aspect-ratio: 4 / 5; position: sticky; top: 96px; } }
+  .legalnote {
+    font-size: var(--text-small); color: var(--fg-2);
+    border-left: 2px solid var(--rule); padding-left: var(--spacing-4); margin-top: var(--spacing-6);
+  }
+
+  /* ============================================ S5 the oracle */
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--spacing-3); max-width: 820px; margin-inline: auto; }
+  @media (min-width: 768px) { .cards { gap: var(--spacing-5); } }
+  .card {
+    position: relative; aspect-ratio: 2 / 3;
+    border: 1px solid var(--rule); background: var(--panel);
+    display: flex; align-items: center; justify-content: center; overflow: hidden;
+    touch-action: manipulation; -webkit-tap-highlight-color: transparent;
+    transition: border-color var(--dur-base) var(--ease-out-quart);
+  }
+  .card:hover { border-color: var(--accent); }
+  .card__back, .card__face {
+    position: absolute; inset: 0; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; gap: var(--spacing-3);
+    padding: var(--spacing-4); text-align: center;
+  }
+  .card__face { opacity: var(--h, 0); }
+  .card__back { opacity: calc(1 - var(--h, 0)); }
+  .card__sweep {
+    position: absolute; top: -10%; left: -30%; width: 60%; height: 120%; pointer-events: none;
+    background: linear-gradient(100deg, transparent, rgb(242 240 234 / 0.16) 45%, rgb(143 165 216 / 0.3) 52%, transparent);
+    transform: translateX(calc(-110% + var(--h, 0) * 370%)) skewX(-8deg);
+  }
+  .card__edge {
+    position: absolute; inset-inline: 0; top: 0; height: 2px; background: var(--accent);
+    transform: scaleX(var(--h, 0)); transform-origin: 0 50%;
+  }
+  .card__n { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--fg-2); }
+  .card__k { font-family: var(--font-display); font-size: clamp(1rem, 2.2vw, 1.5rem); color: var(--fg); }
+  .card__v { font-size: var(--text-small); color: var(--fg-2); max-width: 22ch; }
+  .card__hint { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); }
+  .card__moon { width: 56px; height: 56px; color: var(--accent); opacity: 0.75; margin-bottom: var(--spacing-2); }
+  /* the revealed face is a printed plate: aged paper, one ink, dark type on light */
+  .card__face { padding: 0; justify-content: flex-end; }
+  .card__plate { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .card__cap {
+    position: relative; width: 100%; display: flex; flex-direction: column; gap: var(--spacing-1);
+    padding: var(--spacing-7) var(--spacing-3) var(--spacing-3); text-align: center;
+    background: linear-gradient(to bottom, rgb(236 232 222 / 0), rgb(236 232 222 / 0.92) 46%, rgb(236 232 222 / 0.98));
+  }
+  .card__cap .card__k { font-size: clamp(0.95rem, 2vw, 1.3rem); color: #1A2033; }
+  .card__cap .card__v { font-size: 11px; line-height: 1.4; color: #3D465C; max-width: 24ch; margin-inline: auto; }
+  .deckbar { display: flex; align-items: center; gap: var(--spacing-4); flex-wrap: wrap; justify-content: center; margin-top: var(--spacing-5); }
+  .deckbar__n { color: var(--fg-2); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; }
+  .reading {
+    margin-top: var(--spacing-7); border-top: 1px solid var(--rule); padding-top: var(--spacing-6);
+    opacity: 0; transform: translateY(10px);
+    transition: opacity var(--dur-expressive) var(--ease-out-quart), transform var(--dur-expressive) var(--ease-out-quart);
+  }
+  .reading.on { opacity: 1; transform: none; }
+  .reading__t { font-family: var(--font-display); font-size: var(--text-h3); max-width: 46ch; }
+  .picks { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--spacing-4); margin-top: var(--spacing-5); }
+  @media (max-width: 640px) { .picks { grid-template-columns: 1fr; } }
+  .pick {
+    border: 1px solid var(--rule); padding: var(--spacing-4);
+    display: flex; flex-direction: column; gap: 6px; text-decoration: none; color: inherit;
+    opacity: 0; transform: translateY(12px);
+    transition:
+      opacity var(--dur-base) var(--ease-out-quart),
+      transform var(--dur-base) var(--ease-out-quart),
+      border-color var(--dur-base) var(--ease-out-quart);
+  }
+  .reading.on .pick { opacity: 1; transform: none; }
+  .reading.on .pick:nth-child(2) { transition-delay: 80ms; }
+  .reading.on .pick:nth-child(3) { transition-delay: 160ms; }
+  .pick:hover { border-color: var(--accent); }
+  .pick__n { font-family: var(--font-display); font-size: 1.05rem; }
+  .pick__p { font-family: var(--font-mono); font-size: var(--text-small); color: var(--gold); font-variant-numeric: tabular-nums; }
+  .pick__go { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-top: var(--spacing-1); }
+  .disclaim { margin-top: var(--spacing-5); font-size: var(--text-small); color: var(--fg-2); max-width: 60ch; }
+
+  /* ============================================ S6 the thirteen moons */
+  .rail13 {
+    display: flex; gap: var(--spacing-4); overflow-x: auto;
+    scroll-snap-type: x mandatory; padding-bottom: var(--spacing-5);
+    scrollbar-width: thin; -webkit-overflow-scrolling: touch;
+  }
+  .rail13::-webkit-scrollbar { height: 2px; }
+  .rail13::-webkit-scrollbar-thumb { background: var(--rule); }
+  .moon {
+    flex: 0 0 min(230px, 68vw); scroll-snap-align: start;
+    border: 1px solid var(--rule); padding: var(--spacing-5);
+    display: flex; flex-direction: column; gap: var(--spacing-3);
+    text-decoration: none; color: inherit;
+    transition: border-color var(--dur-base) var(--ease-out-quart), background-color var(--dur-base) var(--ease-out-quart);
+  }
+  .moon:hover { border-color: var(--accent); }
+  .moon--live { border-color: var(--gold); background: color-mix(in srgb, var(--gold) 7%, transparent); }
+  .moon__d { width: 36px; height: 36px; }
+  .moon__n { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.2em; color: var(--fg-2); }
+  .moon__t { font-family: var(--font-display); font-size: 1.35rem; letter-spacing: 0.04em; }
+  .moon__dt { font-family: var(--font-mono); font-size: var(--text-small); color: var(--fg-2); font-variant-numeric: tabular-nums; }
+  .state { display: inline-flex; align-items: center; gap: 7px; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; }
+  .state::before { content: ''; width: 14px; height: 1px; background: currentColor; flex: none; }
+  .state--past { color: var(--fg-2); }
+  .state--past::before { background: repeating-linear-gradient(90deg, currentColor 0 3px, transparent 3px 6px); }
+  .state--live { color: var(--gold); }
+  .state--next { color: var(--accent); }
+  .railnav { display: flex; gap: var(--spacing-2); margin-top: var(--spacing-4); }
+  .railnav button { width: 44px; height: 44px; border: 1px solid var(--rule); display: flex; align-items: center; justify-content: center; color: var(--fg-2); }
+  .railnav button:hover { border-color: var(--fg); color: var(--fg); }
+
+  /* ============================================ S7 the circle */
+  .circle { position: relative; isolation: isolate; overflow: hidden; border: 1px solid var(--rule); }
+  .circle img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
+  .circle::after {
+    content: ''; position: absolute; inset: 0; z-index: -1;
+    background: linear-gradient(105deg, rgb(11 16 32 / 0.92) 12%, rgb(11 16 32 / 0.72) 52%, rgb(11 16 32 / 0.35));
+  }
+  .circle__in {
+    padding: var(--spacing-8) var(--spacing-5);
+    display: flex; flex-direction: column; gap: var(--spacing-4); color: var(--color-moonlight);
+  }
+  @media (min-width: 768px) { .circle__in { padding: var(--spacing-10) var(--spacing-8); max-width: 640px; } }
+  .circle h2 { color: var(--color-moonlight); }
+  .circle__form { display: flex; flex-direction: column; gap: var(--spacing-4); margin-top: var(--spacing-3); align-items: flex-start; }
+  .circle__form .field, .circle__form .consent, .circle__form .formmsg, .circle__form .formnote { width: 100%; }
+  .circle__form .btn { align-self: flex-start; min-width: 190px; }
+  .circle__form .field { position: relative; display: flex; flex-direction: column; gap: 6px; }
+  .circle__form .field label { font-size: var(--text-eyebrow); text-transform: uppercase; letter-spacing: var(--tracking-eyebrow); color: rgb(242 240 234 / 0.72); }
+  .circle__form input[type='email'] {
+    width: 100%; padding: 14px 2px; font-size: 16px; color: var(--color-moonlight);
+    background: transparent; border: 0; border-bottom: 1px solid rgb(242 240 234 / 0.34);
+    border-radius: 0; font-family: var(--font-body);
+  }
+  .circle__form input[type='email']::placeholder { color: rgb(242 240 234 / 0.42); }
+  .field__line {
+    position: absolute; inset-inline: 0; bottom: 0; height: 1px; background: var(--color-aurora);
+    transform: scaleX(0); transition: transform var(--dur-base) var(--ease-out-quart);
+  }
+  .circle__form input:focus { outline: none; }
+  .circle__form input:focus ~ .field__line { transform: scaleX(1); }
+  .circle__form .field:focus-within label { color: var(--color-aurora); }
+  .consent { display: flex; gap: var(--spacing-3); align-items: flex-start; font-size: var(--text-small); color: rgb(242 240 234 / 0.82); max-width: 52ch; }
+  .consent input { width: 24px; height: 24px; flex: none; margin-top: 1px; accent-color: var(--color-aurora); }
+  @media (pointer: coarse) { .consent input { width: 26px; height: 26px; } }
+  .formmsg { font-size: var(--text-small); min-height: 1.5em; }
+  .formmsg[data-tone='err'] { color: var(--color-errore); }
+  .formmsg[data-tone='ok'] { color: var(--color-verderame); }
+  .formnote { font-size: var(--text-small); color: rgb(242 240 234 / 0.6); max-width: 52ch; border-left: 2px solid rgb(242 240 234 / 0.2); padding-left: var(--spacing-4); }
+
+  /* ============================================ entrances */
+  .rise > * {
+    opacity: 0; transform: translateY(18px);
+    transition: opacity var(--dur-expressive) var(--ease-out-quart), transform var(--dur-expressive) var(--ease-out-quart);
+  }
+  .rise.in > * { opacity: 1; transform: none; }
+  .rise.in > *:nth-child(2) { transition-delay: 60ms; }
+  .rise.in > *:nth-child(3) { transition-delay: 120ms; }
+  .rise.in > *:nth-child(4) { transition-delay: 180ms; }
+  /* once it has arrived the delay must go, or a hover on the same element waits
+     for a stagger that already played */
+  .rise.done > *,
+  .rise.done > *:nth-child(2),
+  .rise.done > *:nth-child(3),
+  .rise.done > *:nth-child(4) { transition-delay: 0s !important; }
+
+  .draw path, .draw circle, .draw line, .draw ellipse {
+    stroke-dasharray: var(--len, 400); stroke-dashoffset: var(--len, 400);
+    transition: stroke-dashoffset 900ms var(--ease-out-quart);
+  }
+  .draw.in path, .draw.in circle, .draw.in line, .draw.in ellipse { stroke-dashoffset: 0; }
+  .draw.in path:nth-child(2) { transition-delay: 90ms; }
+  .draw.in path:nth-child(3) { transition-delay: 180ms; }
+
+  /* every loop stops when the tab is hidden */
+  body.paused *, body.paused *::before, body.paused *::after { animation-play-state: paused !important; }
+}
+
+/* Reduced motion is honoured completely, not merely shortened: the parallax,
+   the canvas, the marquee and the scrub all switch off, and what is left is
+   opacity. The positional transforms are re-applied inside the block, because
+   killing transform outright would drop those blocks out of place. */
+@media (prefers-reduced-motion: reduce) {
+  .rise > * { opacity: 1 !important; transform: none !important; }
+  .draw path, .draw circle, .draw line, .draw ellipse { stroke-dashoffset: 0 !important; }
+  .wipe img { clip-path: inset(0 0 0 0) !important; transform: none !important; }
+  .env__glow, .ticker__track, .cue span, .dial__glow { animation: none !important; }
+  .ticker__track { width: auto; transform: none !important; }
+  .ticker__set:nth-child(2) { display: none; }
+  .dial__glow { opacity: 0.5 !important; }
+  .band[data-pos='lc'] .band__in { transform: translateY(-50%) !important; }
+  .ring { display: none; }
+}
+
+/* the same states, forced from script when the media query flips live */
+html.rm .rise > * { opacity: 1; transform: none; }
+html.rm .draw path, html.rm .draw circle, html.rm .draw line, html.rm .draw ellipse { stroke-dashoffset: 0; }
+html.rm .wipe img { clip-path: inset(0 0 0 0); transform: none; }
+
+/* A hero headline is typographically a heading and semantically a paragraph:
+   the page already has its one h1, and three more would be noise in the outline. */
+.h {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: var(--tracking-display);
+  line-height: var(--leading-tight);
+}
+
+/* Section headings.
+   These used to inherit nothing but the display face, so the browser's own
+   1.17em for an h2 inside a <section> was deciding the typography of the page —
+   which is how "La linea è qui." ended up smaller than the paragraph under it. */
+.sec h2,
+.island h2 { font-size: var(--text-h2); }
+
+/* A heading that is also a link stays a heading: no underline until it is
+   hovered or focused, and then a hairline rather than the browser's rule. */
+.coll__t h3 a,
+.label h2 a {
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size var(--dur-base) var(--ease-out-quart);
+}
+.coll__t h3 a:hover,
+.coll__t h3 a:focus-visible,
+.label h2 a:hover,
+.label h2 a:focus-visible { background-size: 100% 1px; }
+
+/**
+ * Il telefono: la stessa pagina, senza l'aria pensata per un monitor.
+ *
+ * Misurato prima di toccare niente: la home era alta 13504px su uno schermo da
+ * 844, cioè sedici schermate. Non perché ci fosse troppo dentro — le sezioni
+ * sono otto — ma perché ogni respiro era tarato su un monitor da 1440px e
+ * riportato tale e quale su 390.
+ *
+ * Tre voci facevano quasi tutto:
+ *  · 96px di margine sopra e sotto ogni sezione, otto volte: 1536px, quasi due
+ *    schermate di vuoto puro;
+ *  · 96px fra una collezione e l'altra, quattro volte;
+ *  · e il blocco della lettura dell'oracolo, che occupa 587px di pagina anche
+ *    quando nessuno ha ancora pescato, perché è trasparente ma resta nel
+ *    flusso. Su un monitor non si nota. Su un telefono è mezza schermata di
+ *    niente sotto le carte, e chi scorre pensa che la sezione sia finita.
+ *
+ * Il rimedio non toglie contenuti e non cambia il computer: restringe il
+ * respiro dove lo schermo è stretto, e fa sparire dal flusso quello che ancora
+ * non c'è.
+ */
+@media (max-width: 767px) {
+  .sec { padding-block: var(--spacing-8); }
+  .island { padding-block: var(--spacing-8); }
+  .coll { gap: var(--spacing-8); }
+
+  /* niente da leggere finché non si pesca: non occupa la pagina */
+  .reading:not(.on) { display: none; }
+
+  /* Le tre carte stanno in 390px, quindi ognuna è larga 109: il disegno regge,
+     il testo dentro no — «Tieni premuto» andava a capo in mezzo. Si stringe
+     l'interno invece di rimpicciolire le carte, che sono la sezione. */
+  .cards { gap: var(--spacing-2); }
+  .card__back { padding: var(--spacing-2); gap: var(--spacing-2); }
+  .card__moon { width: 40px; height: 40px; margin-bottom: 0; }
+  .card__n, .card__hint { font-size: 9px; letter-spacing: 0.08em; }
+
+  /* La tabella della luna: etichetta a sinistra, valore a destra. Due delle
+     sette righe non ci stavano — «Prossima luna nuova» è larga 160px per via
+     dei 0,18em di spaziatura fra le lettere, e «11 set 2026 · 03:26 UTC» ne
+     chiede 187: insieme sforano i 350 disponibili, e andavano a capo tutte e
+     due lasciando «UTC» da solo su una riga sua.
+     Si stringe la spaziatura e il corpo del valore invece di spezzare le
+     righe: la coppia etichetta-valore si legge solo se sta su una riga. */
+  .readout .k { letter-spacing: 0.08em; }
+  .readout .v { font-size: 13px; }
+  /* Se la coppia non entra in una riga, il valore scende INTERO sulla riga
+     sotto invece di spezzarsi a metà. Su 360px «Prossima luna nuova» e «11 set
+     2026 · 03:26 UTC» chiedono 330 e ne hanno 320: prima si rompevano tutte e
+     due, lasciando «UTC» da solo. Una coppia etichetta-valore si legge se sta
+     insieme; spezzata non vuol dire niente. */
+  .readout div { gap: var(--spacing-3); flex-wrap: wrap; }
+  .readout .k, .readout .v { white-space: nowrap; }
+  .readout .v { margin-inline-start: auto; }
+
+  /* Il prezzo di una collezione è spinto a destra da un margine automatico.
+     Sulla riga larga funziona; quando la famiglia di capi è lunga e manda il
+     prezzo a capo, quel margine lo lascia appeso a destra da solo — e fra una
+     collezione e l'altra il prezzo cambia posto senza motivo. */
+  .coll__price { margin-inline-start: 0; }
+
+  /* L'occhiello sopra il titolo dell'eroe andava a capo, e non per il motivo
+     che sembrava: la misura di lettura di 36ch vale per la prosa sotto, ma su
+     una riga di sole maiuscole spaziate taglia a 281px una riga che ne
+     chiederebbe 300. Si toglie il limite a lei sola, e si stringe un poco la
+     spaziatura perche' stia larga sul telefono piu' stretto. */
+  /* L'occhiello sopra il titolo aveva bisogno di 367px e ne aveva 350: andava
+     a capo lasciando «VIII / XIII» su una riga sua. Due cause insieme, e la
+     prima non si vedeva nel foglio — la spaziatura fra le lettere era scritta
+     in linea nel componente, dove batte qualunque regola. Spostata di la, qui
+     si puo' stringere; e si toglie la misura di lettura di 36ch, che vale per
+     la prosa sotto ma non per una riga di maiuscole spaziate. */
+  .statichero__eyebrow { letter-spacing: 0.08em; }
+}
