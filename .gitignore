@@ -43,3 +43,6 @@ next-env.d.ts
 # generato da scripts/tokens-to-css.mjs a ogni avvio e a ogni compilazione:
 # versionarlo vorrebbe dire vedere una modifica finta ogni volta
 /src/styles/theme.css
+
+.vercel
+.env*
