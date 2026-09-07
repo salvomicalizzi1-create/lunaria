@@ -90,6 +90,8 @@ export function Studio() {
   const [restored, setRestored] = useState(false);
   const [waiting, setWaiting] = useState(false);
   const [device, setDevice] = useState<Device>('computer');
+  /* fermo, invio (deposito e push), attesa (Vercel compila) */
+  const [online, setOnline] = useState<{ fase: 'fermo' | 'invio' | 'attesa' }>({ fase: 'fermo' });
   const [scale, setScale] = useState(1);
   const stageRef = useRef<HTMLDivElement>(null);
 
@@ -525,6 +527,97 @@ export function Studio() {
     [dirty, load, previewPath],
   );
 
+  /**
+   * Manda online: deposita, invia, e aspetta di vederlo davvero cambiato.
+   *
+   * La parte che sembra superflua e non lo è è l'attesa. Un invio riuscito non
+   * vuol dire un sito aggiornato: la compilazione su Vercel dura una trentina
+   * di secondi e può anche rifiutare — se un colore rende un testo illeggibile
+   * si ferma, e online resta la versione di prima. Dire «fatto» a quel punto
+   * sarebbe falso, e lo si scoprirebbe solo aprendo il sito.
+   *
+   * Quindi si guarda l'identificativo della pubblicazione servita dal sito
+   * vero, e si dichiara fatto solo quando è cambiato.
+   */
+  async function mandaOnline() {
+    if (dirty > 0) {
+      setMsg({
+        tone: 'err',
+        lines: [
+          `Ci sono ${dirty} modifiche non ancora salvate.`,
+          'Online va quello che sta sul disco: salva prima, o resterebbero qui.',
+        ],
+      });
+      return;
+    }
+
+    setOnline({ fase: 'invio' });
+    setMsg(null);
+    try {
+      const res = await fetch('/api/studio/pubblica', { method: 'POST' });
+      const esito = await res.json();
+
+      if (!res.ok || !esito.ok) {
+        setOnline({ fase: 'fermo' });
+        setMsg({ tone: 'err', lines: [String(esito.messaggio ?? 'non è riuscito'), esito.dettaglio].filter(Boolean) });
+        return;
+      }
+
+      /* niente da mandare: si dice e si smette, senza far girare una rotella */
+      if (esito.file === 0 && /già aggiornato/.test(String(esito.messaggio))) {
+        setOnline({ fase: 'fermo' });
+        setMsg({ tone: 'ok', lines: [String(esito.messaggio)] });
+        return;
+      }
+
+      setOnline({ fase: 'attesa' });
+      setMsg({ tone: 'ok', lines: [String(esito.messaggio), 'Seguo la compilazione…'] });
+
+      /* Si segue la pubblicazione di QUESTO commit, non «la più recente»: se ne
+         partissero due ravvicinate, la sua è la sua. E così si sa anche quando
+         fallisce, invece di aspettare invano che qualcosa cambi. */
+      const scadenza = Date.now() + 180_000;
+      const sha = String(esito.sha ?? '');
+      // eslint-disable-next-line no-constant-condition
+      while (true) {
+        await new Promise((r) => setTimeout(r, 4000));
+        const q = await fetch(`/api/studio/pubblica?sha=${encodeURIComponent(sha)}`).then((r) => r.json());
+
+        if (q.stato === 'online') {
+          setOnline({ fase: 'fermo' });
+          setMsg({ tone: 'ok', lines: ['È online.', String(q.sito)] });
+          return;
+        }
+        if (q.stato === 'fallita') {
+          setOnline({ fase: 'fermo' });
+          setMsg({
+            tone: 'err',
+            lines: [
+              'La compilazione si è fermata: online resta la versione di prima.',
+              'Di solito è il controllo del contrasto dei colori. Guarda su Vercel cosa dice.',
+              q.url ? String(q.url) : '',
+            ].filter(Boolean),
+          });
+          return;
+        }
+        if (Date.now() > scadenza) {
+          setOnline({ fase: 'fermo' });
+          setMsg({
+            tone: 'err',
+            lines: [
+              'Le modifiche sono su GitHub, ma dopo tre minuti la pubblicazione non è ancora finita.',
+              'Non vuol dire che sia andata male: controlla su Vercel come procede.',
+            ],
+          });
+          return;
+        }
+      }
+    } catch (e) {
+      setOnline({ fase: 'fermo' });
+      setMsg({ tone: 'err', lines: [String((e as Error).message)] });
+    }
+  }
+
   if (!data) {
     return (
       <>
@@ -558,6 +651,19 @@ export function Studio() {
           </span>
           <button className="st-save" onClick={save} disabled={busy || dirty === 0} type="button">
             {busy ? 'Salvo…' : 'Salva'}
+          </button>
+          {/* «Salva» resta sul tuo computer, «Manda online» arriva al sito vero:
+              due gesti diversi, e devono restare due pulsanti diversi. */}
+          <button
+            className="st-online"
+            onClick={mandaOnline}
+            disabled={busy || online.fase !== 'fermo'}
+            type="button"
+            title="Deposita le modifiche, le manda su GitHub, e aspetta che il sito online sia davvero cambiato"
+          >
+            {online.fase === 'fermo' ? 'Manda online'
+              : online.fase === 'invio' ? 'Mando…'
+              : 'Compilo…'}
           </button>
         </header>
 

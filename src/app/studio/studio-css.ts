@@ -33,6 +33,17 @@ export const STUDIO_CSS = `
   padding: 9px 20px; border: 1px solid var(--gold); background: none; color: var(--gold);
   font: inherit; font-size: 13px; cursor: pointer; border-radius: 2px;
 }
+
+/* «Manda online» sta accanto a «Salva» ma non deve somigliargli: uno resta sul
+   tuo computer, l'altro arriva al sito che vedono tutti. */
+.st-online {
+  padding: 9px 16px; margin-left: 8px;
+  background: none; border: 1px solid var(--acc); color: var(--acc);
+  font: inherit; font-size: 12px; letter-spacing: .06em; cursor: pointer; border-radius: 2px;
+  white-space: nowrap;
+}
+.st-online:hover:not(:disabled) { background: var(--acc); color: var(--ink); }
+.st-online:disabled { opacity: .45; cursor: default; }
 .st-save:hover:not(:disabled) { background: var(--gold); color: var(--ink); }
 .st-save:disabled { opacity: .35; cursor: default; }
 
